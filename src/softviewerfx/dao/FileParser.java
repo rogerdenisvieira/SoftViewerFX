@@ -18,13 +18,13 @@ import softviewerfx.models.LineBean;
  *
  * @author roger
  */
-public class FileProcessor {
+public class FileParser {
 
     private final BufferedReader reader;
     private final ObservableList<LineBean> fileLines;
     private final File file;
 
-    public FileProcessor(File file) throws FileNotFoundException {
+    public FileParser(File file) throws FileNotFoundException {
         this.file = file;
         this.reader = new BufferedReader(new FileReader(file));
         this.fileLines = FXCollections.observableArrayList();
@@ -56,19 +56,19 @@ public class FileProcessor {
         return fileLines;
     }
 
-    public int[] getModuleIndexes() {
-        String fileName = this.file.getName();
-        String fileExtension = fileName.substring(fileName.lastIndexOf(".") + 1);
+    public int[] getModuleIndexes(int selectedOption) {
         int[] indexes = new int[2];
 
-        if (fileExtension.equals("txt")) {
-            indexes[0] = 0;
-            indexes[1] = 10;
-        } else if (fileExtension.equals("REM")) {
-            indexes[0] = 41;
-            indexes[1] = 43;
-        }
-
+        switch(selectedOption){
+            case 1:
+                indexes[0] = 0;
+                indexes[1] = 10;
+                break;
+            case 2:
+                indexes[0] = 41;
+                indexes[1] = 43;
+                break;
+        }     
         return indexes;
     }
 

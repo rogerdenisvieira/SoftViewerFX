@@ -23,7 +23,7 @@ import softviewerfx.models.DataBean;
  *
  * @author roger
  */
-public class LineProcessor {
+public class LineParser {
 
     private static final List<String> VALUESTOFORMAT = Arrays.asList("Valor", "Mora", "Multa", "Juros", "Total","Encargos");
     private static final LayoutReader READER = new LayoutReader();
