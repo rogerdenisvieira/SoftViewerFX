@@ -46,30 +46,12 @@ public class FileParser {
                 thisLinexindex++;
             }
 
-//            if (fileLines.size() >= 2) {
-//                fileLines.remove(0);
-//                fileLines.remove(fileLines.size() - 1);
-//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return fileLines;
     }
 
-    public int[] getModuleIndexes(int selectedOption) {
-        int[] indexes = new int[2];
 
-        switch(selectedOption){
-            case 1:
-                indexes[0] = 0;
-                indexes[1] = 10;
-                break;
-            case 2:
-                indexes[0] = 41;
-                indexes[1] = 43;
-                break;
-        }     
-        return indexes;
-    }
 
 }

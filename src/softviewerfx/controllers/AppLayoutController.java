@@ -8,6 +8,7 @@ package softviewerfx.controllers;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,6 +25,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import softviewerfx.dao.FileParser;
 import softviewerfx.dao.LineParser;
+import softviewerfx.dao.SettingsParser;
 import softviewerfx.models.DataBean;
 import softviewerfx.models.LineBean;
 
@@ -33,9 +35,10 @@ import softviewerfx.models.LineBean;
  */
 public class AppLayoutController implements Initializable {
 
+    private SettingsParser settingsReader;
     private FileChooser fileChooser;
     private FileParser fileProcessor;
-    private File fileInUse;
+    private static File fileInUse;
 
     @FXML
     private Label filePathLabel;
@@ -55,7 +58,6 @@ public class AppLayoutController implements Initializable {
     TableView<DataBean> dataTable;
     @FXML
     private Button btnProcess;
-    
 
     @Override
     @FXML
@@ -69,49 +71,60 @@ public class AppLayoutController implements Initializable {
                 new FileChooser.ExtensionFilter("REM", "*.rem")
         );
 
+        try {
+            settingsReader = new SettingsParser();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
         valueColumn.setCellValueFactory(cellData -> cellData.getValue().lineValueProperty());
         indexColumn.setCellValueFactory(cellData -> cellData.getValue().lineIndexProperty());
 
         dataNameColumn.setCellValueFactory(cellData -> cellData.getValue().dataProperty());
         dataValueColumn.setCellValueFactory(cellData -> cellData.getValue().dataValueProperty());
-        
+
         disableComponents(true);
         this.fileLinesTable.disableProperty().set(true);
         this.dataTable.disableProperty().set(true);
 
-        
-        
-
-        ObservableList<String> options
-                = FXCollections.observableArrayList(
-                        "Option 1",
-                        "Option 2",
-                        "Option 3"
-                );
-
-        ddlLayoutSelect.setItems(options);
+        this.fillComboBox();
 
     }
 
     @FXML
     public void openFile() {
+
         this.fileInUse = fileChooser.showOpenDialog(new Stage());
-        if(this.fileInUse != null){
+
+        if (this.fileInUse != null) {
             disableComponents(false);
+            this.fileLinesTable.disableProperty().set(true);
+            this.dataTable.disableProperty().set(true);
             filePathLabel.setText(fileInUse.getAbsolutePath());
         }
 
     }
 
     @FXML
-    public void processMouseClick() {
+    public void processLineFocused() {
+        int begin, end;
+
+        //guarda o objeto referente à linha selecionada.
         LineBean line = fileLinesTable.getSelectionModel().getSelectedItem();
+
+        //busca o índice selecionado do combobox
         int selectedIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
-        int[] indexes = fileProcessor.getModuleIndexes(selectedIndex);
+
+        //busca as configurações conforme a seleção do item
+        String[] settings = settingsReader.readSettings().get(selectedIndex);
 
         System.out.println(line.getLineValue().toString());
         try {
-            dataTable.setItems(LineParser.processLine(line, indexes[0], indexes[1]));
+            //resgata os índices
+            begin = Integer.parseInt(settings[1]);
+            end = Integer.parseInt(settings[2]);
+
+            dataTable.setItems(LineParser.processLine(line, begin, end));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -134,7 +147,7 @@ public class AppLayoutController implements Initializable {
         if (fileInUse != null) {
 
             try {
-                fileProcessor = new FileParser(fileInUse);                
+                fileProcessor = new FileParser(fileInUse);
                 fileLinesTable.setItems(fileProcessor.getFileLines());
                 disableComponents(true);
                 this.fileLinesTable.disableProperty().set(false);
@@ -144,9 +157,26 @@ public class AppLayoutController implements Initializable {
             }
         }
     }
-    
-    private void disableComponents(boolean b){   
+
+    //popula o combobox com os valores do arquivo de configuração
+    private void disableComponents(boolean b) {
         ddlLayoutSelect.disableProperty().set(b);
         btnProcess.disableProperty().set(b);
+    }
+
+    private void fillComboBox() {
+
+        //recebe o retorno dos valores do arquivo de configuração
+        List<String[]> setOfValues = settingsReader.readSettings();
+
+        ObservableList<String> options = FXCollections.observableArrayList();
+
+        //itera sobre os valores de configuração adicionando a chave de cada
+        setOfValues.stream().forEach((s) -> {
+            options.add(s[0]);
+        });
+
+        //popula o combobox
+        ddlLayoutSelect.setItems(options);
     }
 }

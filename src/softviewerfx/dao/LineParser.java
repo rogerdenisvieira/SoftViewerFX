@@ -26,7 +26,7 @@ import softviewerfx.models.DataBean;
 public class LineParser {
 
     private static final List<String> VALUESTOFORMAT = Arrays.asList("Valor", "Mora", "Multa", "Juros", "Total","Encargos");
-    private static final LayoutReader READER = new LayoutReader();
+    private static final LayoutParser READER = new LayoutParser();
     private static String attributeValue;
 
     public static ObservableList<DataBean> processLine(LineBean lineValue, int beginModName, int endModName) throws ParseException {

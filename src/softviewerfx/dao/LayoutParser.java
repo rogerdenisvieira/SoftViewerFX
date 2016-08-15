@@ -16,12 +16,12 @@ import softviewerfx.models.LayoutBean;
  *
  * @author roger
  */
-public class LayoutReader {
+public class LayoutParser {
 
     private File layoutFile;
     public final String FILE_PATH = "layout.xml";
 
-    public LayoutReader() {
+    public LayoutParser() {
         //this.layoutFile = new File(FILE_PATH);
 
         layoutFile = new File(FILE_PATH);
