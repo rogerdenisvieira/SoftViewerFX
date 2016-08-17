@@ -7,6 +7,8 @@ package softviewerfx.controllers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -21,6 +23,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import softviewerfx.dao.FileParser;
@@ -63,6 +68,7 @@ public class AppLayoutController implements Initializable {
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
@@ -74,7 +80,7 @@ public class AppLayoutController implements Initializable {
         try {
             settingsReader = new SettingsParser();
         } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
+            showAlert(ex);
         }
 
         valueColumn.setCellValueFactory(cellData -> cellData.getValue().lineValueProperty());
@@ -125,21 +131,50 @@ public class AppLayoutController implements Initializable {
             end = Integer.parseInt(settings[2]);
 
             dataTable.setItems(LineParser.processLine(line, begin, end));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        } catch (Exception ex) {
+            showAlert(ex);
         }
     }
 
     @FXML
     public void processGoTo() {
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText("Look, an Information Dialog");
-        alert.setContentText("I have a great message for you!");
+        System.out.println("clicou em Go To");
+    }
+
+    public void showAlert(Exception ex) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error Dialog");
+        alert.setHeaderText("An error has been occurred.");
+        alert.setContentText(ex.getMessage());
+
+        
+
+// Create expandable Exception.
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        ex.printStackTrace(pw);
+        String exceptionText = sw.toString();
+
+        Label label = new Label("The exception stacktrace was:");
+
+        TextArea textArea = new TextArea(exceptionText);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+        GridPane.setVgrow(textArea, Priority.ALWAYS);
+        GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+        GridPane expContent = new GridPane();
+        expContent.setMaxWidth(Double.MAX_VALUE);
+        expContent.add(label, 0, 0);
+        expContent.add(textArea, 0, 1);
+
+// Set expandable Exception into the dialog pane.
+        alert.getDialogPane().setExpandableContent(expContent);
 
         alert.showAndWait();
-
-        System.out.println("clicou em Go To");
     }
 
     @FXML
@@ -153,17 +188,17 @@ public class AppLayoutController implements Initializable {
                 this.fileLinesTable.disableProperty().set(false);
                 this.dataTable.disableProperty().set(false);
             } catch (FileNotFoundException ex) {
-                System.out.println(ex.getMessage());
+                showAlert(ex);
             }
         }
     }
 
-    //popula o combobox com os valores do arquivo de configuração
     private void disableComponents(boolean b) {
         ddlLayoutSelect.disableProperty().set(b);
         btnProcess.disableProperty().set(b);
     }
 
+    //popula o combobox com os valores do arquivo de configuração
     private void fillComboBox() {
 
         //recebe o retorno dos valores do arquivo de configuração
