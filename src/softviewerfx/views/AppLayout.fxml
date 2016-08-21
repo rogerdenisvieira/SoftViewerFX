@@ -7,12 +7,12 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softviewerfx.controllers.AppLayoutController">
+<AnchorPane id="AnchorPane" fx:id="ap" minHeight="600.0" minWidth="700.0" prefHeight="623.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softviewerfx.controllers.AppLayoutController">
     <children>
       <MenuBar layoutY="2.0" minHeight="25.0" minWidth="640.0" prefHeight="29.0" prefWidth="640.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <menus>
@@ -35,7 +35,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="fileLinesTable" layoutX="14.0" layoutY="266.0" minHeight="150.0" minWidth="612.0" onKeyReleased="#processLineFocused" onMouseClicked="#processLineFocused" prefHeight="150.0" prefWidth="612.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <TableView fx:id="fileLinesTable" layoutX="14.0" layoutY="266.0" minHeight="125.0" minWidth="612.0" onKeyReleased="#processLineFocused" onMouseClicked="#processLineFocused" prefHeight="131.0" prefWidth="672.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <columns>
             <TableColumn fx:id="indexColumn" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" resizable="false" text="Index" />
             <TableColumn fx:id="valueColumn" prefWidth="536.0" text="Value" />
@@ -64,5 +64,7 @@
       <ComboBox fx:id="ddlLayoutSelect" layoutX="60.0" layoutY="40.0" prefWidth="150.0" />
       <Button fx:id="btnProcess" layoutX="218.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnProcessClicked" text="Process" />
       <Label fx:id="lblLayout" layoutX="14.0" layoutY="44.0" text="Layout:" />
+      <Spinner fx:id="spinGoToLine" layoutX="492.0" layoutY="589.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="59.0" />
+      <Button fx:id="btnGoTo" layoutX="634.0" layoutY="589.0" mnemonicParsing="false" text="Go!" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0" />
     </children>
 </AnchorPane>

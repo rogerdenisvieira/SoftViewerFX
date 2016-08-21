@@ -1,735 +1,764 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <layouts>
-	<layout module="MVEB010681">
-<attribute description="Id. Interface" length="4" begin="1" end="4"/>
-<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-<attribute description="Sequencial" length="7" begin="16" end="22"/>
-<attribute description="Instituição" length="5" begin="23" end="27"/>
-<attribute description="Agência" length="5" begin="28" end="32"/>
-<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-<attribute description="Tipo de movimento" length="3" begin="59" end="61"/>
-<attribute description="Total das prestações origem" length="17" begin="62" end="78"/>
-<attribute description="Total das prestações do acordo" length="17" begin="79" end="95"/>
-<attribute description="Produto do contrato de acordo" length="5" begin="96" end="100"/>
-<attribute description="Total de prestações do acordo" length="5" begin="101" end="105"/>
-<attribute description="Taxa de juros do acordo" length="13" begin="106" end="118"/>
-<attribute description="Login do operador responsável pelo acordo" length="20" begin="119" end="138"/>
-<attribute description="Filler" length="361" begin="139" end="499"/>
-<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB010681">
+        <attribute description="Id. Interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Tipo de movimento" length="3" begin="59" end="61"/>
+        <attribute description="Total das prestações origem" length="17" begin="62" end="78"/>
+        <attribute description="Total das prestações do acordo" length="17" begin="79" end="95"/>
+        <attribute description="Produto do contrato de acordo" length="5" begin="96" end="100"/>
+        <attribute description="Total de prestações do acordo" length="5" begin="101" end="105"/>
+        <attribute description="Taxa de juros do acordo" length="13" begin="106" end="118"/>
+        <attribute description="Login do operador responsável pelo acordo" length="20" begin="119" end="138"/>
+        <attribute description="Filler" length="361" begin="139" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB010682">
-<attribute description="Id. Interface" length="4" begin="1" end="4"/>
-<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-<attribute description="Sequencial" length="7" begin="16" end="22"/>
-<attribute description="Instituição" length="5" begin="23" end="27"/>
-<attribute description="Agência" length="5" begin="28" end="32"/>
-<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-<attribute description="Nr. Instituição da parcela a acordar" length="5" begin="59" end="63"/>
-<attribute description="Agencia relacionada ao acordo" length="5" begin="64" end="68"/>
-<attribute description="Cliente da parcela a acordar" length="11" begin="69" end="79"/>
-<attribute description="Contrato relacionado ao acordo" length="13" begin="80" end="92"/>
-<attribute description="Nr. prestação" length="5" begin="93" end="97"/>
-<attribute description="Tipo de parcela" length="5" begin="98" end="102"/>
-<attribute description="Data de vcto. da prestação" length="8" begin="103" end="110"/>
-<attribute description="Valor prestação" length="17" begin="111" end="127"/>
-<attribute description="Mora / juros" length="17" begin="128" end="144"/>
-<attribute description="Multa" length="17" begin="145" end="161"/>
-<attribute description="Valor total de acréscimos e descontos" length="17" begin="162" end="178"/>
-<attribute description="Sinal do total dos acréscimos/descontos" length="1" begin="179" end="179"/>
-<attribute description="Valor total" length="17" begin="180" end="196"/>
-<attribute description="Filler" length="303" begin="197" end="499"/>
-<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB010682">
+        <attribute description="Id. Interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. Instituição da parcela a acordar" length="5" begin="59" end="63"/>
+        <attribute description="Agencia relacionada ao acordo" length="5" begin="64" end="68"/>
+        <attribute description="Cliente da parcela a acordar" length="11" begin="69" end="79"/>
+        <attribute description="Contrato relacionado ao acordo" length="13" begin="80" end="92"/>
+        <attribute description="Nr. prestação" length="5" begin="93" end="97"/>
+        <attribute description="Tipo de parcela" length="5" begin="98" end="102"/>
+        <attribute description="Data de vcto. da prestação" length="8" begin="103" end="110"/>
+        <attribute description="Valor prestação" length="17" begin="111" end="127"/>
+        <attribute description="Mora / juros" length="17" begin="128" end="144"/>
+        <attribute description="Multa" length="17" begin="145" end="161"/>
+        <attribute description="Valor total de acréscimos e descontos" length="17" begin="162" end="178"/>
+        <attribute description="Sinal do total dos acréscimos/descontos" length="1" begin="179" end="179"/>
+        <attribute description="Valor total" length="17" begin="180" end="196"/>
+        <attribute description="Filler" length="303" begin="197" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
  
- 	<layout module="MVEB010683">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. Instituição da parcela a acordar" length="5" begin="59" end="63"/>
-		<attribute description="Agencia relacionada ao acordo" length="5" begin="64" end="68"/>
-		<attribute description="Cliente da parcela a acordar" length="11" begin="69" end="79"/>
-		<attribute description="Contrato relacionado ao acordo" length="13" begin="80" end="92"/>
-		<attribute description="Nr. prestação" length="5" begin="93" end="97"/>
-		<attribute description="Tipo de parcela" length="5" begin="98" end="102"/>
-		<attribute description="Sequencial de tarifa" length="5" begin="103" end="107"/>
-		<attribute description="Descrição Acréscimos / desconto" length="40" begin="108" end="147"/>
-		<attribute description="Código da tarifa" length="5" begin="148" end="152"/>
-		<attribute description="Valor da tarifa" length="17" begin="153" end="169"/>
-		<attribute description="Tipo de movimento" length="1" begin="170" end="170"/>
-		<attribute description="Data da inclusão da tarifa" length="8" begin="171" end="178"/>
-		<attribute description="Identificador da tarifa" length="10" begin="179" end="188"/>
-		<attribute description="Valor original da tarifa" length="17" begin="189" end="205"/>
-		<attribute description="Filler" length="294" begin="206" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB010683">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. Instituição da parcela a acordar" length="5" begin="59" end="63"/>
+        <attribute description="Agencia relacionada ao acordo" length="5" begin="64" end="68"/>
+        <attribute description="Cliente da parcela a acordar" length="11" begin="69" end="79"/>
+        <attribute description="Contrato relacionado ao acordo" length="13" begin="80" end="92"/>
+        <attribute description="Nr. prestação" length="5" begin="93" end="97"/>
+        <attribute description="Tipo de parcela" length="5" begin="98" end="102"/>
+        <attribute description="Sequencial de tarifa" length="5" begin="103" end="107"/>
+        <attribute description="Descrição Acréscimos / desconto" length="40" begin="108" end="147"/>
+        <attribute description="Código da tarifa" length="5" begin="148" end="152"/>
+        <attribute description="Valor da tarifa" length="17" begin="153" end="169"/>
+        <attribute description="Tipo de movimento" length="1" begin="170" end="170"/>
+        <attribute description="Data da inclusão da tarifa" length="8" begin="171" end="178"/>
+        <attribute description="Identificador da tarifa" length="10" begin="179" end="188"/>
+        <attribute description="Valor original da tarifa" length="17" begin="189" end="205"/>
+        <attribute description="Filler" length="294" begin="206" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB010684">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
-		<attribute description="Data de vcto. da prestação" length="8" begin="64" end="71"/>
-		<attribute description="Valor de principal" length="17" begin="72" end="88"/>
-		<attribute description="Valor de juros" length="17" begin="89" end="105"/>
-		<attribute description="Total de acréscimos/descontos" length="17" begin="106" end="122"/>
-		<attribute description="Sinal dos acréscimos/descontos" length="1" begin="123" end="123"/>
-		<attribute description="Valor total da prestação" length="17" begin="124" end="140"/>
-		<attribute description="Número do cheque" length="9" begin="141" end="149"/>
-		<attribute description="Instituição do cheque" length="5" begin="150" end="154"/>
-		<attribute description="Agência do cheque" length="5" begin="155" end="159"/>
-		<attribute description="Número da conta do cheque" length="12" begin="160" end="171"/>
-		<attribute description="Código do dígito da conta do cheque" length="2" begin="172" end="173"/>
-		<attribute description="CPF/CNPJ do sacado" length="14" begin="174" end="187"/>
-		<attribute description="Nome do sacado " length="60" begin="188" end="247"/>
-		<attribute description="Filler" length="252" begin="248" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB010684">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
+        <attribute description="Data de vcto. da prestação" length="8" begin="64" end="71"/>
+        <attribute description="Valor de principal" length="17" begin="72" end="88"/>
+        <attribute description="Valor de juros" length="17" begin="89" end="105"/>
+        <attribute description="Total de acréscimos/descontos" length="17" begin="106" end="122"/>
+        <attribute description="Sinal dos acréscimos/descontos" length="1" begin="123" end="123"/>
+        <attribute description="Valor total da prestação" length="17" begin="124" end="140"/>
+        <attribute description="Número do cheque" length="9" begin="141" end="149"/>
+        <attribute description="Instituição do cheque" length="5" begin="150" end="154"/>
+        <attribute description="Agência do cheque" length="5" begin="155" end="159"/>
+        <attribute description="Número da conta do cheque" length="12" begin="160" end="171"/>
+        <attribute description="Código do dígito da conta do cheque" length="2" begin="172" end="173"/>
+        <attribute description="CPF/CNPJ do sacado" length="14" begin="174" end="187"/>
+        <attribute description="Nome do sacado " length="60" begin="188" end="247"/>
+        <attribute description="Filler" length="252" begin="248" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB010685">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
-		<attribute description="Sequencial de tarifa" length="5" begin="64" end="68"/>
-		<attribute description="Descrição Acréscimos / desconto" length="40" begin="69" end="108"/>
-		<attribute description="Código da tarifa" length="5" begin="109" end="113"/>
-		<attribute description="Valor da tarifa" length="17" begin="114" end="130"/>
-		<attribute description="Tipo de movimento" length="1" begin="131" end="131"/>
-		<attribute description="Data da inclusão da tarifa" length="8" begin="132" end="139"/>
-		<attribute description="Filler" length="360" begin="140" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB010685">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
+        <attribute description="Sequencial de tarifa" length="5" begin="64" end="68"/>
+        <attribute description="Descrição Acréscimos / desconto" length="40" begin="69" end="108"/>
+        <attribute description="Código da tarifa" length="5" begin="109" end="113"/>
+        <attribute description="Valor da tarifa" length="17" begin="114" end="130"/>
+        <attribute description="Tipo de movimento" length="1" begin="131" end="131"/>
+        <attribute description="Data da inclusão da tarifa" length="8" begin="132" end="139"/>
+        <attribute description="Filler" length="360" begin="140" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB020686">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. prestação" length="5" begin="59" end="63"/>
-		<attribute description="Data de vencimento" length="8" begin="64" end="71"/>
-		<attribute description="Valor do boleto" length="17" begin="72" end="88"/>
-		<attribute description="Banco de cobrança" length="5" begin="89" end="93"/>
-		<attribute description="Agência de cobrança s/ dígito" length="5" begin="94" end="98"/>
-		<attribute description="Número da conta de cobrança" length="12" begin="99" end="110"/>
-		<attribute description="Dígito da conta de cobrança" length="2" begin="111" end="112"/>
-		<attribute description="Carteira de cobrança" length="5" begin="113" end="117"/>
-		<attribute description="Espécie de documento" length="5" begin="118" end="122"/>
-		<attribute description="Local de pagamento" length="80" begin="123" end="202"/>
-		<attribute description="CNPJ da instituição cedente" length="14" begin="203" end="216"/>
-		<attribute description="Nome da instituição cedente" length="60" begin="217" end="276"/>
-		<attribute description="endereço do sacado" length="40" begin="277" end="316"/>
-		<attribute description="Número do sacado" length="7" begin="317" end="323"/>
-		<attribute description="Complemento do sacado" length="20" begin="324" end="343"/>
-		<attribute description="Bairro do sacado" length="30" begin="344" end="373"/>
-		<attribute description="Cidade do sacado" length="40" begin="374" end="413"/>
-		<attribute description="Estado do sacado" length="2" begin="414" end="415"/>
-		<attribute description="CEP do sacado" length="8" begin="416" end="423"/>
-		<attribute description="Nosso número" length="10" begin="424" end="433"/>
-		<attribute description="Dígito do nosso número" length="2" begin="434" end="435"/>
-		<attribute description="Login do operador responsável" length="20" begin="436" end="455"/>
-		<attribute description="Filler" length="44" begin="456" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB020686">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. prestação" length="5" begin="59" end="63"/>
+        <attribute description="Data de vencimento" length="8" begin="64" end="71"/>
+        <attribute description="Valor do boleto" length="17" begin="72" end="88"/>
+        <attribute description="Banco de cobrança" length="5" begin="89" end="93"/>
+        <attribute description="Agência de cobrança s/ dígito" length="5" begin="94" end="98"/>
+        <attribute description="Número da conta de cobrança" length="12" begin="99" end="110"/>
+        <attribute description="Dígito da conta de cobrança" length="2" begin="111" end="112"/>
+        <attribute description="Carteira de cobrança" length="5" begin="113" end="117"/>
+        <attribute description="Espécie de documento" length="5" begin="118" end="122"/>
+        <attribute description="Local de pagamento" length="80" begin="123" end="202"/>
+        <attribute description="CNPJ da instituição cedente" length="14" begin="203" end="216"/>
+        <attribute description="Nome da instituição cedente" length="60" begin="217" end="276"/>
+        <attribute description="endereço do sacado" length="40" begin="277" end="316"/>
+        <attribute description="Número do sacado" length="7" begin="317" end="323"/>
+        <attribute description="Complemento do sacado" length="20" begin="324" end="343"/>
+        <attribute description="Bairro do sacado" length="30" begin="344" end="373"/>
+        <attribute description="Cidade do sacado" length="40" begin="374" end="413"/>
+        <attribute description="Estado do sacado" length="2" begin="414" end="415"/>
+        <attribute description="CEP do sacado" length="8" begin="416" end="423"/>
+        <attribute description="Nosso número" length="10" begin="424" end="433"/>
+        <attribute description="Dígito do nosso número" length="2" begin="434" end="435"/>
+        <attribute description="Login do operador responsável" length="20" begin="436" end="455"/>
+        <attribute description="Filler" length="44" begin="456" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB020687">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. prestação" length="5" begin="59" end="63"/>
-		<attribute description="Sequencial da Instrução" length="3" begin="64" end="66"/>
-		<attribute description="Instrução de sacado" length="80" begin="67" end="146"/>
-		<attribute description="Filler" length="353" begin="147" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB020687">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. prestação" length="5" begin="59" end="63"/>
+        <attribute description="Sequencial da Instrução" length="3" begin="64" end="66"/>
+        <attribute description="Instrução de sacado" length="80" begin="67" end="146"/>
+        <attribute description="Filler" length="353" begin="147" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB030688">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Instituição do contrato" length="5" begin="44" end="48"/>
-		<attribute description="Prefixo do contrato" length="13" begin="49" end="61"/>
-		<attribute description="Tipo de tarifa" length="5" begin="62" end="66"/>
-		<attribute description="Data da tarifa" length="8" begin="67" end="74"/>
-		<attribute description="Valor da tarifa" length="17" begin="75" end="91"/>
-		<attribute description="Login do operador responsável" length="20" begin="92" end="111"/>
-		<attribute description="Filler" length="388" begin="112" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB030688">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Instituição do contrato" length="5" begin="44" end="48"/>
+        <attribute description="Prefixo do contrato" length="13" begin="49" end="61"/>
+        <attribute description="Tipo de tarifa" length="5" begin="62" end="66"/>
+        <attribute description="Data da tarifa" length="8" begin="67" end="74"/>
+        <attribute description="Valor da tarifa" length="17" begin="75" end="91"/>
+        <attribute description="Login do operador responsável" length="20" begin="92" end="111"/>
+        <attribute description="Filler" length="388" begin="112" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB040689">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
-		<attribute description="Número do cheque" length="9" begin="64" end="72"/>
-		<attribute description="Instituição do cheque" length="5" begin="73" end="77"/>
-		<attribute description="Agência do cheque" length="5" begin="78" end="82"/>
-		<attribute description="Número da conta do cheque" length="12" begin="83" end="94"/>
-		<attribute description="Código do dígito da conta do cheque" length="2" begin="95" end="96"/>
-		<attribute description="CPF/CNPJ do sacado" length="14" begin="97" end="110"/>
-		<attribute description="Nome do sacado " length="60" begin="111" end="170"/>
-		<attribute description="Login do operador responsável" length="20" begin="171" end="190"/>
-		<attribute description="Filler" length="309" begin="191" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB040689">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Nr. prestação (Sequencial)" length="5" begin="59" end="63"/>
+        <attribute description="Número do cheque" length="9" begin="64" end="72"/>
+        <attribute description="Instituição do cheque" length="5" begin="73" end="77"/>
+        <attribute description="Agência do cheque" length="5" begin="78" end="82"/>
+        <attribute description="Número da conta do cheque" length="12" begin="83" end="94"/>
+        <attribute description="Código do dígito da conta do cheque" length="2" begin="95" end="96"/>
+        <attribute description="CPF/CNPJ do sacado" length="14" begin="97" end="110"/>
+        <attribute description="Nome do sacado " length="60" begin="111" end="170"/>
+        <attribute description="Login do operador responsável" length="20" begin="171" end="190"/>
+        <attribute description="Filler" length="309" begin="191" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB050690">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Instituição do contrato" length="5" begin="44" end="48"/>
-		<attribute description="Agência do contrato" length="5" begin="49" end="53"/>
-		<attribute description="Número do contrato" length="13" begin="54" end="66"/>
-		<attribute description="Número do status do WF" length="9" begin="67" end="75"/>
-		<attribute description="Observação" length="255" begin="76" end="330"/>
-		<attribute description="Login do operador responsável" length="20" begin="331" end="350"/>
-		<attribute description="Filler" length="149" begin="351" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB050690">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Instituição do contrato" length="5" begin="44" end="48"/>
+        <attribute description="Agência do contrato" length="5" begin="49" end="53"/>
+        <attribute description="Número do contrato" length="13" begin="54" end="66"/>
+        <attribute description="Número do status do WF" length="9" begin="67" end="75"/>
+        <attribute description="Observação" length="255" begin="76" end="330"/>
+        <attribute description="Login do operador responsável" length="20" begin="331" end="350"/>
+        <attribute description="Filler" length="149" begin="351" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="MVEB060691">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Sequencial" length="7" begin="16" end="22"/>
-		<attribute description="Instituição" length="5" begin="23" end="27"/>
-		<attribute description="Agência" length="5" begin="28" end="32"/>
-		<attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
-		<attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
-		<attribute description="Login do operador responsável" length="20" begin="59" end="78"/>
-		<attribute description="Filler" length="421" begin="79" end="499"/>
-		<attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
-	</layout>
+    <layout module="MVEB060691">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Sequencial" length="7" begin="16" end="22"/>
+        <attribute description="Instituição" length="5" begin="23" end="27"/>
+        <attribute description="Agência" length="5" begin="28" end="32"/>
+        <attribute description="Cód. Cliente" length="11" begin="33" end="43"/>
+        <attribute description="Nr. do acordo (Chave de controle)" length="15" begin="44" end="58"/>
+        <attribute description="Login do operador responsável" length="20" begin="59" end="78"/>
+        <attribute description="Filler" length="421" begin="79" end="499"/>
+        <attribute description="Final de linha (#)" length="1" begin="500" end="500"/>
+    </layout>
 
-	<layout module="EMFP040020">
-		<attribute description="Id. interface" length="4" begin="1" end="4"/>
-		<attribute description="Tipo lote" length="3" begin="5" end="7"/>
-		<attribute description="Cód. reg." length="3" begin="8" end="10"/>
-		<attribute description="Nr. lote" length="5" begin="11" end="15"/>
-		<attribute description="Nr. reg. (0000001...9999999)" length="7" begin="16" end="22"/>
-		<attribute description="Data do movimento" length="8" begin="23" end="30"/>
-		<attribute description="Agência" length="5" begin="31" end="35"/>
-		<attribute description="Convênio" length="9" begin="36" end="44"/>
-		<attribute description="Matriz" length="9" begin="45" end="53"/>
-		<attribute description="Zeros" length="9" begin="54" end="62"/>
-		<attribute description="Número do contrato de limite" length="17" begin="63" end="79"/>
-		<attribute description="Valor aprovado" length="17" begin="80" end="96"/>
-		<attribute description="Valor utilizado" length="17" begin="97" end="113"/>
-		<attribute description="Valor reservado" length="17" begin="114" end="130"/>
-		<attribute description="Valor bloqueado" length="17" begin="131" end="147"/>
-		<attribute description="Saldo disponível" length="17" begin="148" end="164"/>
-		<attribute description="Sinal do saldo" length="1" begin="165" end="165"/>
-		<attribute description="Data de aprovação" length="8" begin="166" end="173"/>
-		<attribute description="Data de vencimento" length="8" begin="174" end="181"/>
-		<attribute description="Situação do limite" length="2" begin="182" end="183"/>
-		<attribute description="Observação" length="255" begin="184" end="438"/>
-		<attribute description="Filler" length="44" begin="439" end="482"/>
-		<attribute description="Filler" length="17" begin="483" end="499"/>
-		<attribute description="Filler" length="5" begin="500" end="504"/>
-		<attribute description="Filler" length="25" begin="505" end="529"/>
-		<attribute description="Filler" length="8" begin="530" end="537"/>
-		<attribute description="Filler" length="9" begin="538" end="546"/>
-		<attribute description="Filler" length="3" begin="547" end="549"/>
-		<attribute description="Final de linha " length="1" begin="550" end="550"/>
-	</layout>
+    <layout module="EMFP040020">
+        <attribute description="Id. interface" length="4" begin="1" end="4"/>
+        <attribute description="Tipo lote" length="3" begin="5" end="7"/>
+        <attribute description="Cód. reg." length="3" begin="8" end="10"/>
+        <attribute description="Nr. lote" length="5" begin="11" end="15"/>
+        <attribute description="Nr. reg. (0000001...9999999)" length="7" begin="16" end="22"/>
+        <attribute description="Data do movimento" length="8" begin="23" end="30"/>
+        <attribute description="Agência" length="5" begin="31" end="35"/>
+        <attribute description="Convênio" length="9" begin="36" end="44"/>
+        <attribute description="Matriz" length="9" begin="45" end="53"/>
+        <attribute description="Zeros" length="9" begin="54" end="62"/>
+        <attribute description="Número do contrato de limite" length="17" begin="63" end="79"/>
+        <attribute description="Valor aprovado" length="17" begin="80" end="96"/>
+        <attribute description="Valor utilizado" length="17" begin="97" end="113"/>
+        <attribute description="Valor reservado" length="17" begin="114" end="130"/>
+        <attribute description="Valor bloqueado" length="17" begin="131" end="147"/>
+        <attribute description="Saldo disponível" length="17" begin="148" end="164"/>
+        <attribute description="Sinal do saldo" length="1" begin="165" end="165"/>
+        <attribute description="Data de aprovação" length="8" begin="166" end="173"/>
+        <attribute description="Data de vencimento" length="8" begin="174" end="181"/>
+        <attribute description="Situação do limite" length="2" begin="182" end="183"/>
+        <attribute description="Observação" length="255" begin="184" end="438"/>
+        <attribute description="Filler" length="44" begin="439" end="482"/>
+        <attribute description="Filler" length="17" begin="483" end="499"/>
+        <attribute description="Filler" length="5" begin="500" end="504"/>
+        <attribute description="Filler" length="25" begin="505" end="529"/>
+        <attribute description="Filler" length="8" begin="530" end="537"/>
+        <attribute description="Filler" length="9" begin="538" end="546"/>
+        <attribute description="Filler" length="3" begin="547" end="549"/>
+        <attribute description="Final de linha " length="1" begin="550" end="550"/>
+    </layout>
 
-	<layout module="14">
-		<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-		<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-		<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-		<attribute description="Filler I" length="20" begin="22" end="41"/>
-		<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-		<attribute description="Prefixo do Contrato" length="20" begin="44" end="63"/>
-		<attribute description="Código do Acionamento" length="4" begin="64" end="67"/>
-		<attribute description="Descrição" length="600" begin="68" end="667"/>
-		<attribute description="Data do Acionamento" length="8" begin="668" end="675"/>
-		<attribute description="ID do Acionamento" length="10" begin="676" end="685"/>
-		<attribute description="Filler" length="15" begin="686" end="700"/>
-	</layout>
+    <layout module="14">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="44" end="63"/>
+        <attribute description="Código do Acionamento" length="4" begin="64" end="67"/>
+        <attribute description="Descrição" length="600" begin="68" end="667"/>
+        <attribute description="Data do Acionamento" length="8" begin="668" end="675"/>
+        <attribute description="ID do Acionamento" length="10" begin="676" end="685"/>
+        <attribute description="Filler" length="15" begin="686" end="700"/>
+    </layout>
 
-<layout module="12">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Número do Acordo" length="15" begin="44" end="58"/>
-<attribute description="Prestação do Acordo" length="5" begin="59" end="63"/>
-<attribute description="Data do Pagamento" length="8" begin="64" end="71"/>
-<attribute description="Valor do Pagamento" length="15" begin="72" end="86"/>
-<attribute description="Filler" length="614" begin="87" end="700"/>
-</layout>
+    <layout module="12">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Número do Acordo" length="15" begin="44" end="58"/>
+        <attribute description="Prestação do Acordo" length="5" begin="59" end="63"/>
+        <attribute description="Data do Pagamento" length="8" begin="64" end="71"/>
+        <attribute description="Valor do Pagamento" length="15" begin="72" end="86"/>
+        <attribute description="Filler" length="614" begin="87" end="700"/>
+    </layout>
 
-<layout module="01">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
-<attribute description="Nome " length="60" begin="60" end="119"/>
-<attribute description="Nascimento" length="8" begin="120" end="127"/>
-<attribute description="RG" length="20" begin="128" end="147"/>
-<attribute description="Expedição RG" length="8" begin="148" end="155"/>
-<attribute description="Orgão RG" length="20" begin="156" end="175"/>
-<attribute description="Filiação(Mãe)" length="60" begin="176" end="235"/>
-<attribute description="Filiação(Pai)" length="60" begin="236" end="295"/>
-<attribute description="Conjuge" length="60" begin="296" end="355"/>
-<attribute description="CPF Conjuge" length="14" begin="356" end="369"/>
-<attribute description="Profissão" length="40" begin="370" end="409"/>
-<attribute description="Renda " length="15" begin="410" end="424"/>
-<attribute description="Código Sexo" length="1" begin="425" end="425"/>
-<attribute description="Código Estado Civil" length="1" begin="426" end="426"/>
-<attribute description="Código Tipo de Pessoa" length="1" begin="427" end="427"/>
-<attribute description="Empresa" length="60" begin="428" end="487"/>
-<attribute description="Envio Serasa" length="3" begin="488" end="490"/>
-<attribute description="Serasa" length="8" begin="491" end="498"/>
-<attribute description="E-mail" length="60" begin="499" end="558"/>
-<attribute description="Filler" length="142" begin="559" end="700"/>
-</layout>
+    <layout module="01">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
+        <attribute description="Nome " length="60" begin="60" end="119"/>
+        <attribute description="Nascimento" length="8" begin="120" end="127"/>
+        <attribute description="RG" length="20" begin="128" end="147"/>
+        <attribute description="Expedição RG" length="8" begin="148" end="155"/>
+        <attribute description="Orgão RG" length="20" begin="156" end="175"/>
+        <attribute description="Filiação(Mãe)" length="60" begin="176" end="235"/>
+        <attribute description="Filiação(Pai)" length="60" begin="236" end="295"/>
+        <attribute description="Conjuge" length="60" begin="296" end="355"/>
+        <attribute description="CPF Conjuge" length="14" begin="356" end="369"/>
+        <attribute description="Profissão" length="40" begin="370" end="409"/>
+        <attribute description="Renda " length="15" begin="410" end="424"/>
+        <attribute description="Código Sexo" length="1" begin="425" end="425"/>
+        <attribute description="Código Estado Civil" length="1" begin="426" end="426"/>
+        <attribute description="Código Tipo de Pessoa" length="1" begin="427" end="427"/>
+        <attribute description="Empresa" length="60" begin="428" end="487"/>
+        <attribute description="Envio Serasa" length="3" begin="488" end="490"/>
+        <attribute description="Serasa" length="8" begin="491" end="498"/>
+        <attribute description="E-mail" length="60" begin="499" end="558"/>
+        <attribute description="Filler" length="142" begin="559" end="700"/>
+    </layout>
 
-<layout module="02">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
-<attribute description="Tipo de Telefone" length="1" begin="60" end="60"/>
-<attribute description="DDD" length="3" begin="61" end="63"/>
-<attribute description="Telefone" length="10" begin="64" end="73"/>
-<attribute description="Observações" length="100" begin="74" end="173"/>
-<attribute description="Filler" length="527" begin="174" end="700"/>
-</layout>
+    <layout module="02">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
+        <attribute description="Tipo de Telefone" length="1" begin="60" end="60"/>
+        <attribute description="DDD" length="3" begin="61" end="63"/>
+        <attribute description="Telefone" length="10" begin="64" end="73"/>
+        <attribute description="Observações" length="100" begin="74" end="173"/>
+        <attribute description="Filler" length="527" begin="174" end="700"/>
+    </layout>
 
-<layout module="03">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
-<attribute description="Tipo de Endereço" length="1" begin="60" end="60"/>
-<attribute description="Logradouro" length="65" begin="61" end="125"/>
-<attribute description="Número" length="7" begin="126" end="132"/>
-<attribute description="Complemento" length="30" begin="133" end="162"/>
-<attribute description="Bairro" length="30" begin="163" end="192"/>
-<attribute description="Cidade" length="50" begin="193" end="242"/>
-<attribute description="UF" length="2" begin="243" end="244"/>
-<attribute description="CEP" length="8" begin="245" end="252"/>
-<attribute description="Observações" length="200" begin="253" end="452"/>
-<attribute description="Filler" length="248" begin="453" end="700"/>
-</layout>
+    <layout module="03">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
+        <attribute description="Tipo de Endereço" length="1" begin="60" end="60"/>
+        <attribute description="Logradouro" length="65" begin="61" end="125"/>
+        <attribute description="Número" length="7" begin="126" end="132"/>
+        <attribute description="Complemento" length="30" begin="133" end="162"/>
+        <attribute description="Bairro" length="30" begin="163" end="192"/>
+        <attribute description="Cidade" length="50" begin="193" end="242"/>
+        <attribute description="UF" length="2" begin="243" end="244"/>
+        <attribute description="CEP" length="8" begin="245" end="252"/>
+        <attribute description="Observações" length="200" begin="253" end="452"/>
+        <attribute description="Filler" length="248" begin="453" end="700"/>
+    </layout>
 
-<layout module="04">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
-<attribute description="CPF Referência" length="14" begin="60" end="73"/>
-<attribute description="Nome da Referência" length="65" begin="74" end="138"/>
-<attribute description="Observações" length="200" begin="139" end="338"/>
-<attribute description="Filler" length="362" begin="339" end="700"/>
-</layout>
+    <layout module="04">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="CPF/CNPJ" length="14" begin="46" end="59"/>
+        <attribute description="CPF Referência" length="14" begin="60" end="73"/>
+        <attribute description="Nome da Referência" length="65" begin="74" end="138"/>
+        <attribute description="Observações" length="200" begin="139" end="338"/>
+        <attribute description="Filler" length="362" begin="339" end="700"/>
+    </layout>
 
-<layout module="05">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
-<attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
-<attribute description="Data da Operação" length="8" begin="95" end="102"/>
-<attribute description="Plano" length="5" begin="103" end="107"/>
-<attribute description="Data do Primeiro Vencimento" length="8" begin="108" end="115"/>
-<attribute description="Data da Parcela mais Atrasada" length="8" begin="116" end="123"/>
-<attribute description="Número da Parcela mais Atrasada" length="5" begin="124" end="128"/>
-<attribute description="Valor Financiado" length="15" begin="129" end="143"/>
-<attribute description="Valor Vencido " length="15" begin="144" end="158"/>
-<attribute description="Valor Vincendas" length="15" begin="159" end="173"/>
-<attribute description="Código do Produto" length="10" begin="174" end="183"/>
-<attribute description="Código da Filial" length="10" begin="184" end="193"/>
-<attribute description="Código do Fabricante" length="10" begin="194" end="203"/>
-<attribute description="Taxa do Financiamento" length="8" begin="204" end="211"/>
-<attribute description="Taxa de amortização" length="8" begin="212" end="219"/>
-<attribute description="Risco Sistema" length="10" begin="220" end="229"/>
-<attribute description="Período de Carência " length="10" begin="230" end="239"/>
-<attribute description="Data do Risco" length="8" begin="240" end="247"/>
-<attribute description="Revenda" length="60" begin="248" end="307"/>
-<attribute description="Tipo de Contrato" length="1" begin="308" end="308"/>
-<attribute description="Tipo de Moeda" length="5" begin="309" end="313"/>
-<attribute description="Taxa Teto" length="8" begin="314" end="321"/>
-<attribute description="Taxa Anual do Financiamento" length="8" begin="322" end="329"/>
-<attribute description="Renegociações" length="20" begin="330" end="349"/>
-<attribute description="Unidade de Negócio" length="40" begin="350" end="389"/>
-<attribute description="Serasa" length="3" begin="390" end="392"/>
-<attribute description="Carteira" length="2" begin="393" end="394"/>
-<attribute description="Filler" length="306" begin="395" end="700"/>
-</layout>
+    <layout module="05">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
+        <attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
+        <attribute description="Data da Operação" length="8" begin="95" end="102"/>
+        <attribute description="Plano" length="5" begin="103" end="107"/>
+        <attribute description="Data do Primeiro Vencimento" length="8" begin="108" end="115"/>
+        <attribute description="Data da Parcela mais Atrasada" length="8" begin="116" end="123"/>
+        <attribute description="Número da Parcela mais Atrasada" length="5" begin="124" end="128"/>
+        <attribute description="Valor Financiado" length="15" begin="129" end="143"/>
+        <attribute description="Valor Vencido " length="15" begin="144" end="158"/>
+        <attribute description="Valor Vincendas" length="15" begin="159" end="173"/>
+        <attribute description="Código do Produto" length="10" begin="174" end="183"/>
+        <attribute description="Código da Filial" length="10" begin="184" end="193"/>
+        <attribute description="Código do Fabricante" length="10" begin="194" end="203"/>
+        <attribute description="Taxa do Financiamento" length="8" begin="204" end="211"/>
+        <attribute description="Taxa de amortização" length="8" begin="212" end="219"/>
+        <attribute description="Risco Sistema" length="10" begin="220" end="229"/>
+        <attribute description="Período de Carência " length="10" begin="230" end="239"/>
+        <attribute description="Data do Risco" length="8" begin="240" end="247"/>
+        <attribute description="Revenda" length="60" begin="248" end="307"/>
+        <attribute description="Tipo de Contrato" length="1" begin="308" end="308"/>
+        <attribute description="Tipo de Moeda" length="5" begin="309" end="313"/>
+        <attribute description="Taxa Teto" length="8" begin="314" end="321"/>
+        <attribute description="Taxa Anual do Financiamento" length="8" begin="322" end="329"/>
+        <attribute description="Renegociações" length="20" begin="330" end="349"/>
+        <attribute description="Unidade de Negócio" length="40" begin="350" end="389"/>
+        <attribute description="Serasa" length="3" begin="390" end="392"/>
+        <attribute description="Carteira" length="2" begin="393" end="394"/>
+        <attribute description="Filler" length="306" begin="395" end="700"/>
+    </layout>
 
-<layout module="06">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="Prefixo do Contrato" length="20" begin="61" end="80"/>
-<attribute description="Contrato Completo (+sufixo)" length="20" begin="81" end="100"/>
-<attribute description="Parcela" length="5" begin="101" end="105"/>
-<attribute description="Data Vencimento da Parcela" length="8" begin="106" end="113"/>
-<attribute description="Valor Parcela" length="15" begin="114" end="128"/>
-<attribute description="Encargos Parcela" length="15" begin="129" end="143"/>
-<attribute description="Descrição da Parcela" length="14" begin="144" end="157"/>
-<attribute description="Valor Pago" length="15" begin="158" end="172"/>
-<attribute description="Tipo de Parcela" length="10" begin="173" end="182"/>
-<attribute description="Valor do Juros" length="15" begin="183" end="197"/>
-<attribute description="Flag Parcela Projetada" length="1" begin="198" end="198"/>
-<attribute description="Vencimento Original" length="8" begin="199" end="206"/>
-<attribute description="Percentual de Pagamento" length="3" begin="207" end="209"/>
-<attribute description="Número Acordo Conjunto" length="10" begin="210" end="219"/>
-<attribute description="Filler" length="481" begin="220" end="700"/>
-</layout>
+    <layout module="06">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="61" end="80"/>
+        <attribute description="Contrato Completo (+sufixo)" length="20" begin="81" end="100"/>
+        <attribute description="Parcela" length="5" begin="101" end="105"/>
+        <attribute description="Data Vencimento da Parcela" length="8" begin="106" end="113"/>
+        <attribute description="Valor Parcela" length="15" begin="114" end="128"/>
+        <attribute description="Encargos Parcela" length="15" begin="129" end="143"/>
+        <attribute description="Descrição da Parcela" length="14" begin="144" end="157"/>
+        <attribute description="Valor Pago" length="15" begin="158" end="172"/>
+        <attribute description="Tipo de Parcela" length="10" begin="173" end="182"/>
+        <attribute description="Valor do Juros" length="15" begin="183" end="197"/>
+        <attribute description="Flag Parcela Projetada" length="1" begin="198" end="198"/>
+        <attribute description="Vencimento Original" length="8" begin="199" end="206"/>
+        <attribute description="Percentual de Pagamento" length="3" begin="207" end="209"/>
+        <attribute description="Número Acordo Conjunto" length="10" begin="210" end="219"/>
+        <attribute description="Filler" length="481" begin="220" end="700"/>
+    </layout>
 
-<layout module="07">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
-<attribute description="Prefixo do Contrato" length="20" begin="75" end="94"/>
-<attribute description="Código do Equipamento" length="10" begin="95" end="104"/>
-<attribute description="Valor do Equipamento" length="15" begin="105" end="119"/>
-<attribute description="Valor Financiado" length="15" begin="120" end="134"/>
-<attribute description="Modelo Equipamento" length="60" begin="135" end="194"/>
-<attribute description="Ano Modelo" length="10" begin="195" end="204"/>
-<attribute description="USADO/NOVO" length="10" begin="205" end="214"/>
-<attribute description="Fabricante" length="60" begin="215" end="274"/>
-<attribute description="Numero de Serie" length="40" begin="275" end="314"/>
-<attribute description="Endereco de Localizacao" length="60" begin="315" end="374"/>
-<attribute description="Descrição Equipamento" length="100" begin="375" end="474"/>
-<attribute description="RDME" length="5" begin="475" end="479"/>
-<attribute description="Filler" length="221" begin="480" end="700"/>
-</layout>
+    <layout module="07">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="75" end="94"/>
+        <attribute description="Código do Equipamento" length="10" begin="95" end="104"/>
+        <attribute description="Valor do Equipamento" length="15" begin="105" end="119"/>
+        <attribute description="Valor Financiado" length="15" begin="120" end="134"/>
+        <attribute description="Modelo Equipamento" length="60" begin="135" end="194"/>
+        <attribute description="Ano Modelo" length="10" begin="195" end="204"/>
+        <attribute description="USADO/NOVO" length="10" begin="205" end="214"/>
+        <attribute description="Fabricante" length="60" begin="215" end="274"/>
+        <attribute description="Numero de Serie" length="40" begin="275" end="314"/>
+        <attribute description="Endereco de Localizacao" length="60" begin="315" end="374"/>
+        <attribute description="Descrição Equipamento" length="100" begin="375" end="474"/>
+        <attribute description="RDME" length="5" begin="475" end="479"/>
+        <attribute description="Filler" length="221" begin="480" end="700"/>
+    </layout>
 
-<layout module="08">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
-<attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
-<attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
-<attribute description="ID Apolice" length="20" begin="115" end="134"/>
-<attribute description="Numero Apolice" length="20" begin="135" end="154"/>
-<attribute description="Data Vencimento" length="8" begin="155" end="162"/>
-<attribute description="Valor" length="15" begin="163" end="177"/>
-<attribute description="Tipo de Apolice" length="10" begin="178" end="187"/>
-<attribute description="Filler" length="513" begin="188" end="700"/>
-</layout>
+    <layout module="08">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
+        <attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
+        <attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
+        <attribute description="ID Apolice" length="20" begin="115" end="134"/>
+        <attribute description="Numero Apolice" length="20" begin="135" end="154"/>
+        <attribute description="Data Vencimento" length="8" begin="155" end="162"/>
+        <attribute description="Valor" length="15" begin="163" end="177"/>
+        <attribute description="Tipo de Apolice" length="10" begin="178" end="187"/>
+        <attribute description="Filler" length="513" begin="188" end="700"/>
+    </layout>
 
-<layout module="09">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
-<attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
-<attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
-<attribute description="Data Vencimento" length="8" begin="115" end="122"/>
-<attribute description="Valor" length="15" begin="123" end="137"/>
-<attribute description="Código de Tarifa" length="10" begin="138" end="147"/>
-<attribute description="Filler" length="553" begin="148" end="700"/>
-</layout>
+    <layout module="09">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
+        <attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
+        <attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
+        <attribute description="Data Vencimento" length="8" begin="115" end="122"/>
+        <attribute description="Valor" length="15" begin="123" end="137"/>
+        <attribute description="Código de Tarifa" length="10" begin="138" end="147"/>
+        <attribute description="Filler" length="553" begin="148" end="700"/>
+    </layout>
 
-<layout module="10">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Código da Instituição" length="10" begin="46" end="55"/>
-<attribute description="Agência" length="5" begin="56" end="60"/>
-<attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
-<attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
-<attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
-<attribute description="Data Vencimento" length="8" begin="115" end="122"/>
-<attribute description="Valor" length="15" begin="123" end="137"/>
-<attribute description="Multa" length="15" begin="138" end="152"/>
-<attribute description="Juros" length="15" begin="153" end="167"/>
-<attribute description="Data Pagamento" length="8" begin="168" end="175"/>
-<attribute description="Tipo Pagamento" length="10" begin="176" end="185"/>
-<attribute description="Situação Pagamento" length="10" begin="186" end="195"/>
-<attribute description="Valor Pagamento" length="15" begin="196" end="210"/>
-<attribute description="Filler" length="490" begin="211" end="700"/>
-</layout>
+    <layout module="10">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Código da Instituição" length="10" begin="46" end="55"/>
+        <attribute description="Agência" length="5" begin="56" end="60"/>
+        <attribute description="CPF/CNPJ" length="14" begin="61" end="74"/>
+        <attribute description="PREFIXO DO CONTRATO" length="20" begin="75" end="94"/>
+        <attribute description="Contrato Completo (+sufixo)" length="20" begin="95" end="114"/>
+        <attribute description="Data Vencimento" length="8" begin="115" end="122"/>
+        <attribute description="Valor" length="15" begin="123" end="137"/>
+        <attribute description="Multa" length="15" begin="138" end="152"/>
+        <attribute description="Juros" length="15" begin="153" end="167"/>
+        <attribute description="Data Pagamento" length="8" begin="168" end="175"/>
+        <attribute description="Tipo Pagamento" length="10" begin="176" end="185"/>
+        <attribute description="Situação Pagamento" length="10" begin="186" end="195"/>
+        <attribute description="Valor Pagamento" length="15" begin="196" end="210"/>
+        <attribute description="Filler" length="490" begin="211" end="700"/>
+    </layout>
 
-<layout module="11">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
-<attribute description="Tipo de Interveniente" length="4" begin="46" end="49"/>
-<attribute description="CPF/CNPJ" length="14" begin="50" end="63"/>
-<attribute description="Prefixo do Contrato" length="20" begin="64" end="83"/>
-<attribute description="Nome " length="60" begin="84" end="143"/>
-<attribute description="Nascimento" length="8" begin="144" end="151"/>
-<attribute description="RG" length="20" begin="152" end="171"/>
-<attribute description="Expedição RG" length="8" begin="172" end="179"/>
-<attribute description="Orgão RG" length="20" begin="180" end="199"/>
-<attribute description="Filiação(Mãe)" length="60" begin="200" end="259"/>
-<attribute description="Filiação(Pai)" length="60" begin="260" end="319"/>
-<attribute description="Conjuge" length="60" begin="320" end="379"/>
-<attribute description="CPF Conjuge" length="14" begin="380" end="393"/>
-<attribute description="Profissão" length="40" begin="394" end="433"/>
-<attribute description="Renda " length="15" begin="434" end="448"/>
-<attribute description="Código Sexo" length="1" begin="449" end="449"/>
-<attribute description="Código Estado Civil" length="1" begin="450" end="450"/>
-<attribute description="Código Tipo de Pessoa" length="1" begin="451" end="451"/>
-<attribute description="Empresa" length="60" begin="452" end="511"/>
-<attribute description="Envio Serasa" length="3" begin="512" end="514"/>
-<attribute description="Serasa" length="8" begin="515" end="522"/>
-<attribute description="E-mail" length="60" begin="523" end="582"/>
-<attribute description="Logradouro" length="45" begin="583" end="627"/>
-<attribute description="Bairro" length="15" begin="628" end="642"/>
-<attribute description="Cidade" length="20" begin="643" end="662"/>
-<attribute description="UF" length="2" begin="663" end="664"/>
-<attribute description="CEP" length="8" begin="665" end="672"/>
-<attribute description="DDD" length="5" begin="673" end="677"/>
-<attribute description="Telefone" length="10" begin="678" end="687"/>
-<attribute description="Tipo Telefone" length="25" begin="688" end="712"/>
-<attribute description="Filler" length="28" begin="713" end="740"/>
-</layout>
-
-
-<layout module="13">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Prefixo do Contrato" length="20" begin="44" end="63"/>
-<attribute description="Tipo de Despesa" length="4" begin="64" end="67"/>
-<attribute description="Descrição" length="30" begin="68" end="97"/>
-<attribute description="Data da Despesa" length="8" begin="98" end="105"/>
-<attribute description="Valor" length="15" begin="106" end="120"/>
-<attribute description="Identificador da Tarifa" length="10" begin="121" end="130"/>
-<attribute description="Filler" length="570" begin="131" end="700"/>
-</layout>
+    <layout module="11">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Tipo de Movimento" length="2" begin="44" end="45"/>
+        <attribute description="Tipo de Interveniente" length="4" begin="46" end="49"/>
+        <attribute description="CPF/CNPJ" length="14" begin="50" end="63"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="64" end="83"/>
+        <attribute description="Nome " length="60" begin="84" end="143"/>
+        <attribute description="Nascimento" length="8" begin="144" end="151"/>
+        <attribute description="RG" length="20" begin="152" end="171"/>
+        <attribute description="Expedição RG" length="8" begin="172" end="179"/>
+        <attribute description="Orgão RG" length="20" begin="180" end="199"/>
+        <attribute description="Filiação(Mãe)" length="60" begin="200" end="259"/>
+        <attribute description="Filiação(Pai)" length="60" begin="260" end="319"/>
+        <attribute description="Conjuge" length="60" begin="320" end="379"/>
+        <attribute description="CPF Conjuge" length="14" begin="380" end="393"/>
+        <attribute description="Profissão" length="40" begin="394" end="433"/>
+        <attribute description="Renda " length="15" begin="434" end="448"/>
+        <attribute description="Código Sexo" length="1" begin="449" end="449"/>
+        <attribute description="Código Estado Civil" length="1" begin="450" end="450"/>
+        <attribute description="Código Tipo de Pessoa" length="1" begin="451" end="451"/>
+        <attribute description="Empresa" length="60" begin="452" end="511"/>
+        <attribute description="Envio Serasa" length="3" begin="512" end="514"/>
+        <attribute description="Serasa" length="8" begin="515" end="522"/>
+        <attribute description="E-mail" length="60" begin="523" end="582"/>
+        <attribute description="Logradouro" length="45" begin="583" end="627"/>
+        <attribute description="Bairro" length="15" begin="628" end="642"/>
+        <attribute description="Cidade" length="20" begin="643" end="662"/>
+        <attribute description="UF" length="2" begin="663" end="664"/>
+        <attribute description="CEP" length="8" begin="665" end="672"/>
+        <attribute description="DDD" length="5" begin="673" end="677"/>
+        <attribute description="Telefone" length="10" begin="678" end="687"/>
+        <attribute description="Tipo Telefone" length="25" begin="688" end="712"/>
+        <attribute description="Filler" length="28" begin="713" end="740"/>
+    </layout>
 
 
-<!-- <layout module="15">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Prefixo do Contrato" length="20" begin="44" end="22"/>
-<attribute description="Numero do Acordo" length="10" begin="23" end="32"/>
-<attribute description="Data Acordo" length="8" begin="33" end="40"/>
-<attribute description="Valor Acordo" length="15" begin="41" end="55"/>
-<attribute description="Recuperador Acordo" length="4" begin="56" end="59"/>
-<attribute description="Aditivado" length="7" begin="60" end="66"/>
-<attribute description="Status" length="25" begin="67" end="91"/>
-<attribute description="Plano" length="5" begin="92" end="96"/>
-<attribute description="Filler" length="602" begin="97" end="698"/>
-</layout> -->
+    <layout module="13">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="44" end="63"/>
+        <attribute description="Tipo de Despesa" length="4" begin="64" end="67"/>
+        <attribute description="Descrição" length="30" begin="68" end="97"/>
+        <attribute description="Data da Despesa" length="8" begin="98" end="105"/>
+        <attribute description="Valor" length="15" begin="106" end="120"/>
+        <attribute description="Identificador da Tarifa" length="10" begin="121" end="130"/>
+        <attribute description="Filler" length="570" begin="131" end="700"/>
+    </layout>
 
-<layout module="16">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="CPF/CNPJ" length="14" begin="44" end="57"/>
-<attribute description="Prefixo do Contrato" length="20" begin="58" end="77"/>
-<attribute description="Numero do Acordo" length="8" begin="78" end="85"/>
-<attribute description="Parcela" length="5" begin="86" end="90"/>
-<attribute description="Vencimento da Parcela" length="8" begin="91" end="98"/>
-<attribute description="Status da Parcela" length="10" begin="99" end="108"/>
-<attribute description="Forma de Pagamento" length="20" begin="109" end="128"/>
-<attribute description="Valor Parcela" length="15" begin="129" end="143"/>
-<attribute description="Filler" length="557" begin="144" end="700"/>
-</layout>
 
-<layout module="17">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Código do Cliente" length="11" begin="11" end="21"/>
-<attribute description="Filler I" length="20" begin="22" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="CPF/CNPJ" length="14" begin="44" end="57"/>
-<attribute description="Prefixo do Contrato" length="20" begin="58" end="77"/>
-<attribute description="Contrato Completo(+sufixo)" length="20" begin="78" end="97"/>
-<attribute description="Parcela" length="5" begin="98" end="102"/>
-<attribute description="Vencimento da Parcela" length="8" begin="103" end="110"/>
-<attribute description="Status da Parcela" length="10" begin="111" end="120"/>
-<attribute description="Descrição da Parcela" length="14" begin="121" end="134"/>
-<attribute description="Valor Parcela" length="15" begin="135" end="149"/>
-<attribute description="Valor Encargos" length="15" begin="150" end="164"/>
-<attribute description="Multa" length="15" begin="165" end="179"/>
-<attribute description="Juros" length="15" begin="180" end="194"/>
-<attribute description="Honorarios" length="15" begin="195" end="209"/>
-<attribute description="Valor Total" length="15" begin="210" end="224"/>
-<attribute description="Nnumero da Parcela" length="8" begin="225" end="232"/>
-<attribute description="Numero do acordo" length="8" begin="233" end="240"/>
-<attribute description="Numero do Acordo Conjunto" length="8" begin="241" end="248"/>
-<attribute description="Tipo parcela" length="2" begin="249" end="250"/>
-<attribute description="Filler" length="450" begin="251" end="700"/>
-</layout>
+    <!-- <layout module="15">
+    <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+    <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+    <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+    <attribute description="Filler I" length="20" begin="22" end="41"/>
+    <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+    <attribute description="Prefixo do Contrato" length="20" begin="44" end="22"/>
+    <attribute description="Numero do Acordo" length="10" begin="23" end="32"/>
+    <attribute description="Data Acordo" length="8" begin="33" end="40"/>
+    <attribute description="Valor Acordo" length="15" begin="41" end="55"/>
+    <attribute description="Recuperador Acordo" length="4" begin="56" end="59"/>
+    <attribute description="Aditivado" length="7" begin="60" end="66"/>
+    <attribute description="Status" length="25" begin="67" end="91"/>
+    <attribute description="Plano" length="5" begin="92" end="96"/>
+    <attribute description="Filler" length="602" begin="97" end="698"/>
+    </layout> -->
 
-<layout module="18">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Filler" length="31" begin="11" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
-<attribute description="Descrição" length="20" begin="48" end="67"/>
-<attribute description="Filler" length="633" begin="68" end="700"/>
-</layout>
+    <layout module="16">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="CPF/CNPJ" length="14" begin="44" end="57"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="58" end="77"/>
+        <attribute description="Numero do Acordo" length="8" begin="78" end="85"/>
+        <attribute description="Parcela" length="5" begin="86" end="90"/>
+        <attribute description="Vencimento da Parcela" length="8" begin="91" end="98"/>
+        <attribute description="Status da Parcela" length="10" begin="99" end="108"/>
+        <attribute description="Forma de Pagamento" length="20" begin="109" end="128"/>
+        <attribute description="Valor Parcela" length="15" begin="129" end="143"/>
+        <attribute description="Filler" length="557" begin="144" end="700"/>
+    </layout>
 
-<layout module="19">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Filler" length="31" begin="11" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
-<attribute description="Descrição" length="100" begin="48" end="147"/>
-<attribute description="Tipo Despesa" length="1" begin="148" end="148"/>
-<attribute description="Filler" length="552" begin="149" end="700"/>
-</layout>
+    <layout module="17">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Código do Cliente" length="11" begin="11" end="21"/>
+        <attribute description="Filler I" length="20" begin="22" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="CPF/CNPJ" length="14" begin="44" end="57"/>
+        <attribute description="Prefixo do Contrato" length="20" begin="58" end="77"/>
+        <attribute description="Contrato Completo(+sufixo)" length="20" begin="78" end="97"/>
+        <attribute description="Parcela" length="5" begin="98" end="102"/>
+        <attribute description="Vencimento da Parcela" length="8" begin="103" end="110"/>
+        <attribute description="Status da Parcela" length="10" begin="111" end="120"/>
+        <attribute description="Descrição da Parcela" length="14" begin="121" end="134"/>
+        <attribute description="Valor Parcela" length="15" begin="135" end="149"/>
+        <attribute description="Valor Encargos" length="15" begin="150" end="164"/>
+        <attribute description="Multa" length="15" begin="165" end="179"/>
+        <attribute description="Juros" length="15" begin="180" end="194"/>
+        <attribute description="Honorarios" length="15" begin="195" end="209"/>
+        <attribute description="Valor Total" length="15" begin="210" end="224"/>
+        <attribute description="Nnumero da Parcela" length="8" begin="225" end="232"/>
+        <attribute description="Numero do acordo" length="8" begin="233" end="240"/>
+        <attribute description="Numero do Acordo Conjunto" length="8" begin="241" end="248"/>
+        <attribute description="Tipo parcela" length="2" begin="249" end="250"/>
+        <attribute description="Filler" length="450" begin="251" end="700"/>
+    </layout>
 
-<layout module="20">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Filler" length="31" begin="11" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
-<attribute description="Descrição" length="60" begin="48" end="107"/>
-<attribute description="Filler" length="593" begin="108" end="700"/>
-</layout>
+    <layout module="18">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Filler" length="31" begin="11" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
+        <attribute description="Descrição" length="20" begin="48" end="67"/>
+        <attribute description="Filler" length="633" begin="68" end="700"/>
+    </layout>
 
-<layout module="21">
-<attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
-<attribute description="Data de Movimento" length="8" begin="3" end="10"/>
-<attribute description="Filler" length="31" begin="11" end="41"/>
-<attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
-<attribute description="Código da Carteira" length="2" begin="44" end="45"/>
-<attribute description="Atraso Inicial" length="8" begin="46" end="53"/>
-<attribute description="Atraso Final" length="8" begin="54" end="61"/>
-<attribute description="Valor Inicial" length="15" begin="62" end="76"/>
-<attribute description="Valor Final" length="15" begin="77" end="91"/>
-<attribute description="Parcelamento" length="2" begin="92" end="93"/>
-<attribute description="Alçada" length="1" begin="94" end="94"/>
-<attribute description="Juros de Mora" length="1" begin="95" end="95"/>
-<attribute description="Tipo de Juros" length="1" begin="96" end="96"/>
-<attribute description="% de Juros" length="15" begin="97" end="111"/>
-<attribute description="Juros sobre principal" length="1" begin="112" end="112"/>
-<attribute description="Juros sobre multa" length="1" begin="113" end="113"/>
-<attribute description="Multa" length="1" begin="114" end="114"/>
-<attribute description="% de Multa" length="15" begin="115" end="129"/>
-<attribute description="Multa Sobre Principal" length="1" begin="130" end="130"/>
-<attribute description="Multa Sobre Juros" length="1" begin="131" end="131"/>
-<attribute description="Multa Sobre Encargos" length="1" begin="132" end="132"/>
-<attribute description="% Desconto Principal" length="15" begin="133" end="147"/>
-<attribute description="% Desconto Juros" length="15" begin="148" end="162"/>
-<attribute description="% Desconto Multa" length="15" begin="163" end="177"/>
-<attribute description="% Desconto Encargos" length="15" begin="178" end="192"/>
-<attribute description="Juros de Refinanciamento" length="1" begin="193" end="193"/>
-<attribute description="% de Juros de Refinanciamento" length="15" begin="194" end="208"/>
-<attribute description="Entrada Mínima" length="1" begin="209" end="209"/>
-<attribute description="% Entrada Mínima" length="15" begin="210" end="224"/>
-<attribute description="ID" length="8" begin="225" end="232"/>
-<attribute description="Desconto sobre Vincendas" length="1" begin="233" end="233"/>
-<attribute description="Multa sobre Acordo Atrasado" length="1" begin="234" end="234"/>
-<attribute description="% de Multa sobre Acordo Atrasado" length="15" begin="235" end="249"/>
-<attribute description="Usa Prazo Máximo de Acordo" length="1" begin="250" end="250"/>
-<attribute description="Prazo Máximo de Acordo" length="8" begin="251" end="258"/>
-<attribute description="Limite Maximo Entrada" length="8" begin="259" end="266"/>
-<attribute description="Juros sobre Acordo Atrasado" length="1" begin="267" end="267"/>
-<attribute description="Utiliza INPC" length="1" begin="268" end="268"/>
-<attribute description="Filler" length="432" begin="269" end="700"/>
-</layout>
+    <layout module="19">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Filler" length="31" begin="11" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
+        <attribute description="Descrição" length="100" begin="48" end="147"/>
+        <attribute description="Tipo Despesa" length="1" begin="148" end="148"/>
+        <attribute description="Filler" length="552" begin="149" end="700"/>
+    </layout>
+
+    <layout module="20">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Filler" length="31" begin="11" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Código do Acionamento" length="4" begin="44" end="47"/>
+        <attribute description="Descrição" length="60" begin="48" end="107"/>
+        <attribute description="Filler" length="593" begin="108" end="700"/>
+    </layout>
+
+    <layout module="21">
+        <attribute description="Tipo de Registro" length="2" begin="1" end="2"/>
+        <attribute description="Data de Movimento" length="8" begin="3" end="10"/>
+        <attribute description="Filler" length="31" begin="11" end="41"/>
+        <attribute description="Tipo de Interface" length="2" begin="42" end="43"/>
+        <attribute description="Código da Carteira" length="2" begin="44" end="45"/>
+        <attribute description="Atraso Inicial" length="8" begin="46" end="53"/>
+        <attribute description="Atraso Final" length="8" begin="54" end="61"/>
+        <attribute description="Valor Inicial" length="15" begin="62" end="76"/>
+        <attribute description="Valor Final" length="15" begin="77" end="91"/>
+        <attribute description="Parcelamento" length="2" begin="92" end="93"/>
+        <attribute description="Alçada" length="1" begin="94" end="94"/>
+        <attribute description="Juros de Mora" length="1" begin="95" end="95"/>
+        <attribute description="Tipo de Juros" length="1" begin="96" end="96"/>
+        <attribute description="% de Juros" length="15" begin="97" end="111"/>
+        <attribute description="Juros sobre principal" length="1" begin="112" end="112"/>
+        <attribute description="Juros sobre multa" length="1" begin="113" end="113"/>
+        <attribute description="Multa" length="1" begin="114" end="114"/>
+        <attribute description="% de Multa" length="15" begin="115" end="129"/>
+        <attribute description="Multa Sobre Principal" length="1" begin="130" end="130"/>
+        <attribute description="Multa Sobre Juros" length="1" begin="131" end="131"/>
+        <attribute description="Multa Sobre Encargos" length="1" begin="132" end="132"/>
+        <attribute description="% Desconto Principal" length="15" begin="133" end="147"/>
+        <attribute description="% Desconto Juros" length="15" begin="148" end="162"/>
+        <attribute description="% Desconto Multa" length="15" begin="163" end="177"/>
+        <attribute description="% Desconto Encargos" length="15" begin="178" end="192"/>
+        <attribute description="Juros de Refinanciamento" length="1" begin="193" end="193"/>
+        <attribute description="% de Juros de Refinanciamento" length="15" begin="194" end="208"/>
+        <attribute description="Entrada Mínima" length="1" begin="209" end="209"/>
+        <attribute description="% Entrada Mínima" length="15" begin="210" end="224"/>
+        <attribute description="ID" length="8" begin="225" end="232"/>
+        <attribute description="Desconto sobre Vincendas" length="1" begin="233" end="233"/>
+        <attribute description="Multa sobre Acordo Atrasado" length="1" begin="234" end="234"/>
+        <attribute description="% de Multa sobre Acordo Atrasado" length="15" begin="235" end="249"/>
+        <attribute description="Usa Prazo Máximo de Acordo" length="1" begin="250" end="250"/>
+        <attribute description="Prazo Máximo de Acordo" length="8" begin="251" end="258"/>
+        <attribute description="Limite Maximo Entrada" length="8" begin="259" end="266"/>
+        <attribute description="Juros sobre Acordo Atrasado" length="1" begin="267" end="267"/>
+        <attribute description="Utiliza INPC" length="1" begin="268" end="268"/>
+        <attribute description="Filler" length="432" begin="269" end="700"/>
+    </layout>
+
+    <layout module="1020938741">
+        <attribute description="Código do Banco" length="0" begin="1" end="3"/>
+        <attribute description="Código do Lote" length="0" begin="4" end="7"/>
+        <attribute description="Tipo de Registro" length="0" begin="8" end="8"/>
+        <attribute description="Brancos" length="0" begin="9" end="17"/>
+        <attribute description="Código de Inscrição" length="0" begin="18" end="18"/>
+        <attribute description="Número de Incrição" length="0" begin="19" end="32"/>
+        <attribute description="Convênio" length="0" begin="33" end="45"/>
+        <attribute description="Brancos" length="0" begin="46" end="52"/>
+        <attribute description="Zeros" length="0" begin="53" end="53"/>
+        <attribute description="Agência" length="0" begin="54" end="57"/>
+        <attribute description="Brancos" length="0" begin="58" end="58"/>
+        <attribute description="Zeros" length="0" begin="59" end="65"/>
+        <attribute description="Conta" length="0" begin="66" end="70"/>
+        <attribute description="BRancos" length="0" begin="71" end="71"/>
+        <attribute description="DAC" length="0" begin="72" end="72"/>
+        <attribute description="Nome" length="0" begin="73" end="102"/>
+        <attribute description="Banco" length="0" begin="103" end="132"/>
+        <attribute description="Brancos" length="0" begin="133" end="142"/>
+        <attribute description="Código" length="0" begin="143" end="143"/>
+        <attribute description="Data da Geração" length="0" begin="144" end="151"/>
+        <attribute description="Hora da Geração" length="0" begin="152" end="157"/>
+        <attribute description="Sequência" length="0" begin="158" end="163"/>
+        <attribute description="Layout" length="0" begin="164" end="166"/>
+        <attribute description="Unidade de Densidade" length="0" begin="167" end="171"/>
+        <attribute description="Reservado do Banco" length="0" begin="172" end="191"/>
+        <attribute description="Brancos" length="0" begin="192" end="240"/>
+    </layout>
 
 
 </layouts>

@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,9 +22,12 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.FileChooser;
@@ -64,6 +68,9 @@ public class AppLayoutController implements Initializable {
     @FXML
     private Button btnProcess;
 
+    @FXML
+    private Spinner spinGoToLine;
+
     @Override
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
@@ -76,6 +83,8 @@ public class AppLayoutController implements Initializable {
                 new FileChooser.ExtensionFilter("FOP", "*.fop"),
                 new FileChooser.ExtensionFilter("REM", "*.rem")
         );
+
+        this.spinGoToLine = new Spinner();
 
         try {
             settingsReader = new SettingsParser();
@@ -92,6 +101,7 @@ public class AppLayoutController implements Initializable {
         disableComponents(true);
         this.fileLinesTable.disableProperty().set(true);
         this.dataTable.disableProperty().set(true);
+        this.spinGoToLine.setDisable(true);
 
         this.fillComboBox();
 
@@ -106,6 +116,7 @@ public class AppLayoutController implements Initializable {
             disableComponents(false);
             this.fileLinesTable.disableProperty().set(true);
             this.dataTable.disableProperty().set(true);
+            this.spinGoToLine.setDisable(true);
             filePathLabel.setText(fileInUse.getAbsolutePath());
         }
 
@@ -139,6 +150,20 @@ public class AppLayoutController implements Initializable {
     @FXML
     public void processGoTo() {
         System.out.println("clicou em Go To");
+        TextInputDialog dialog = new TextInputDialog("walter");
+        dialog.setTitle("Text Input Dialog");
+        dialog.setHeaderText("Look, a Text Input Dialog");
+        dialog.setContentText("Please enter your name:");
+
+// Traditional way to get the response value.
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            System.out.println("Your name: " + result.get());
+        }
+
+// The Java 8 way to get the response value (with lambda expression).
+        result.ifPresent(name -> System.out.println("Your name: " + name));
+
     }
 
     public void showAlert(Exception ex) {
@@ -146,8 +171,6 @@ public class AppLayoutController implements Initializable {
         alert.setTitle("Error Dialog");
         alert.setHeaderText("An error has been occurred.");
         alert.setContentText(ex.getMessage());
-
-        
 
 // Create expandable Exception.
         StringWriter sw = new StringWriter();
@@ -187,6 +210,9 @@ public class AppLayoutController implements Initializable {
                 disableComponents(true);
                 this.fileLinesTable.disableProperty().set(false);
                 this.dataTable.disableProperty().set(false);
+                this.spinGoToLine.setDisable(false);
+                this.spinGoToLine.setEditable(true);
+                this.spinGoToLine = new Spinner(0, fileLinesTable.getItems().size(), 0);
             } catch (FileNotFoundException ex) {
                 showAlert(ex);
             }

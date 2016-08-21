@@ -14,6 +14,7 @@ import java.util.List;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import softviewerfx.exceptions.LayoutNotFoundException;
 import softviewerfx.models.AttributeBean;
 import softviewerfx.models.LayoutBean;
 import softviewerfx.models.LineBean;
@@ -25,23 +26,32 @@ import softviewerfx.models.DataBean;
  */
 public class LineParser {
 
-    private static final List<String> VALUESTOFORMAT = Arrays.asList("Valor", "Mora", "Multa", "Juros", "Total","Encargos");
+    private static final List<String> VALUESTOFORMAT = Arrays.asList("Valor", "Mora", "Multa", "Juros", "Total", "Encargos");
     private static final LayoutParser READER = new LayoutParser();
     private static String attributeValue;
 
-    public static ObservableList<DataBean> processLine(LineBean lineValue, int beginModName, int endModName) throws ParseException {
+    public static ObservableList<DataBean> processLine(LineBean lineValue, int beginModName, int endModName) throws ParseException, LayoutNotFoundException {
 
         ObservableList<DataBean> values = FXCollections.observableArrayList();
-        
+
         //busca o nome do módulo pela posição
         String moduleName = lineValue.getLineValue().getValue().substring(beginModName, endModName);
-        
+
         //busca o layout pelo nome do módulo
         LayoutBean foundLayout = READER.findLayout(moduleName);
 
         //verifica se o layout carregou
         if (foundLayout != null) {
             for (AttributeBean a : foundLayout.getAttributes()) {
+
+                System.out.println(
+                        "Module: "
+                        + moduleName
+                        + "Begin: "
+                        + (a.getBegin() - 1)
+                        + "End: "
+                        + a.getEnd());
+
                 attributeValue = lineValue.getLineValue().getValue().substring(a.getBegin() - 1, a.getEnd());
 
                 values.add(new DataBean(
@@ -51,8 +61,9 @@ public class LineParser {
                 );
             }
             return values;
+        } else {
+           throw new LayoutNotFoundException("Layout for module " +moduleName+ " not found.");
         }
-        return null;
     }
 
     //formata o valor a ser exibido conforme a descrição

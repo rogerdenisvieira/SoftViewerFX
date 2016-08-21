@@ -24,6 +24,7 @@ public class SettingsParser {
     private Properties prop;
     private InputStream input;
     private List<String[]> settingsValues = new LinkedList<>();
+    
     public SettingsParser() throws FileNotFoundException {
         this.prop = new Properties();
         this.input = new FileInputStream(SETTINGS_NAME);
