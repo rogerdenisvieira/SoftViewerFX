@@ -30,23 +30,27 @@ public class LineParser {
     private static final LayoutParser READER = new LayoutParser();
     private static String attributeValue;
 
-    public static ObservableList<DataBean> processLine(LineBean lineValue, int beginModName, int endModName) throws ParseException, LayoutNotFoundException {
+    public static ObservableList<DataBean> processLine(LineBean lineValue, String layoutName, String type) throws ParseException, LayoutNotFoundException {
 
         ObservableList<DataBean> values = FXCollections.observableArrayList();
 
         //busca o nome do módulo pela posição
-        String moduleName = lineValue.getLineValue().getValue().substring(beginModName, endModName);
-
+        //String moduleName = lineValue.getLineValue().getValue().substring(beginModName, endModName);
+        
         //busca o layout pelo nome do módulo
-        LayoutBean foundLayout = READER.findLayout(moduleName);
+        LayoutBean foundLayout = READER.findLayout(layoutName, type);
 
+
+        
         //verifica se o layout carregou
         if (foundLayout != null) {
             for (AttributeBean a : foundLayout.getAttributes()) {
 
                 System.out.println(
-                        "Module: "
-                        + moduleName
+                        "Layout: "
+                        + layoutName
+                        + "Tipo: "
+                        + type
                         + "Begin: "
                         + (a.getBegin() - 1)
                         + "End: "
@@ -62,7 +66,7 @@ public class LineParser {
             }
             return values;
         } else {
-           throw new LayoutNotFoundException("Layout for module " +moduleName+ " not found.");
+           throw new LayoutNotFoundException("Layout for " + layoutName + " type " + type + " not found.");
         }
     }
 
