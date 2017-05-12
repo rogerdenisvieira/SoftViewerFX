@@ -18,8 +18,11 @@ import java.util.List;
 public class LayoutBean {
 
     @XStreamAsAttribute
-    private String module;
+    private String layoutName;
     
+    @XStreamAsAttribute
+    private String type;
+
     @XStreamImplicit
     @XStreamAlias("attribute")
     private List<AttributeBean> attributes;
@@ -27,15 +30,29 @@ public class LayoutBean {
     /**
      * @return the module
      */
-    public String getModule() {
-        return module;
+    public String getLayoutName() {
+        return layoutName;
     }
 
     /**
-     * @param module the module to set
+     * @param layoutName the module to set
      */
-    public void setModule(String module) {
-        this.module = module;
+    public void setSetLayoutName(String name) {
+        this.layoutName = name;
+    }
+
+    /**
+     * @return the type
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * @param type the type to set
+     */
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**

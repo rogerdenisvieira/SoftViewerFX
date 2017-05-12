@@ -47,10 +47,13 @@ public class LayoutParser {
     }
 
     // busca o layout específico pelo nome do módulo
-    public LayoutBean findLayout(String moduleName) {
+    public LayoutBean findLayout(String layoutName, String type) {
+        
         LayoutBean foundLayout = null;
         for (LayoutBean l : loadConfig().getLayouts()) {
-            if (l.getModule().equals(moduleName)) {
+            
+            
+            if (l.getLayoutName().equals(layoutName) && l.getType().equals(type)) {
                 foundLayout = l;
             }
         }

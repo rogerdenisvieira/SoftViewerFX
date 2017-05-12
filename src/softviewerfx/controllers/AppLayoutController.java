@@ -79,9 +79,9 @@ public class AppLayoutController implements Initializable {
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Carga SRC", "*.txt"),
-                new FileChooser.ExtensionFilter("FOP", "*.fop"),
-                new FileChooser.ExtensionFilter("REM", "*.rem")
+                new FileChooser.ExtensionFilter("Geral", "*.txt"),
+                new FileChooser.ExtensionFilter("Remessa", "*.rem"),
+                new FileChooser.ExtensionFilter("Retorno", "*.ret")
         );
 
         this.spinGoToLine = new Spinner();
@@ -125,23 +125,48 @@ public class AppLayoutController implements Initializable {
     @FXML
     public void processLineFocused() {
         int begin, end;
+        String type, layoutName;
 
         //guarda o objeto referente à linha selecionada.
         LineBean line = fileLinesTable.getSelectionModel().getSelectedItem();
+        
+        //busca o índice da linha selecionada
+        int selectedLineIndex = fileLinesTable.getSelectionModel().getSelectedIndex();
 
         //busca o índice selecionado do combobox
-        int selectedIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
+        int selectedDDLIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
 
         //busca as configurações conforme a seleção do item
-        String[] settings = settingsReader.readSettings().get(selectedIndex);
+        String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
 
         System.out.println(line.getLineValue().toString());
         try {
-            //resgata os índices
+            //resgata os índices dos segmentos
+            layoutName = settings[0];
             begin = Integer.parseInt(settings[1]);
             end = Integer.parseInt(settings[2]);
-
-            dataTable.setItems(LineParser.processLine(line, begin, end));
+            
+            int tableSize = fileLinesTable.getItems().size();
+            
+            //verificar se é HEADER, SEGMENTO ou TRAILER
+            
+            if(selectedLineIndex == 0){
+                type = "HEADER_ARQUIVO";
+            } else if (selectedLineIndex == 1){
+                type = "HEADER_LOTE";
+            } else if (selectedLineIndex == tableSize - 2){
+                type = "TRAILER_LOTE";
+            } else if (selectedLineIndex == tableSize - 1 ){
+                type = "TRAILER_ARQUIVO";
+            } else {
+                type = line.getLineValue().getValue().substring(begin, end);
+            }
+            
+            System.out.println(selectedLineIndex);
+            System.out.println(type);
+            
+       
+            dataTable.setItems(LineParser.processLine(line, layoutName, type));
         } catch (Exception ex) {
             showAlert(ex);
         }
