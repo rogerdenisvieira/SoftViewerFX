@@ -47,18 +47,22 @@ public class LayoutParser {
     }
 
     // busca o layout específico pelo nome do módulo
-    public LayoutBean findLayout(String layoutName, String type) {
-        
+    public LayoutBean findLayout(String layoutName, String registerType, String segmentType) {
+
         LayoutBean foundLayout = null;
         for (LayoutBean l : loadConfig().getLayouts()) {
-            
-            
-            if (l.getLayoutName().equals(layoutName) && l.getRegisterType().equals(type)) {
-                foundLayout = l;
+            //fazer um IF para verificar se é segmento
+
+            if (l.isIsSegment()) {
+                if (l.getLayoutName().equals(layoutName) && l.getRegisterType().equals(registerType) && l.getSegmentType().equals(segmentType)) {
+                    foundLayout = l;
+                }
+            } else {
+                if (l.getLayoutName().equals(layoutName) && l.getRegisterType().equals(registerType)) {
+                    foundLayout = l;
+                }
             }
         }
-
         return foundLayout;
     }
-
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <layouts> 
-    <layout layoutName="CNAB240" registerType="HEADER_ARQUIVO">
+    <layout layoutName="CNAB240" registerType="0" segmentType="" isSegment="false">
         <attribute description="Código do Banco na compensação" length="3" begin="1" end="3"/>
         <attribute description="Lote de serviço" length="4" begin="4" end="7"/>
         <attribute description="Tipo de registro" length="1" begin="8" end="8"/>
@@ -20,7 +20,8 @@
         <attribute description="Reservado (uso Banco)" length="74" begin="167" end="240"/>
     </layout>
 
-    <layout layoutName="CNAB240" registerType="T">
+    <!-- segmento T -->
+    <layout layoutName="CNAB240" registerType="3" segmentType="T" isSegment="true">
         <attribute description="Código do Banco na compensação" length="3" begin="1" end="3"/>
         <attribute description="Numero do lote retorno" length="4" begin="4" end="7"/>
         <attribute description="Tipo de registro" length="1" begin="8" end="8"/>
@@ -53,30 +54,8 @@
     </layout>
 
 
-
-    <layout layoutName="CNAB240" registerType="R">
-        <attribute description="Código do Banco na compensação"	length="3" begin="1" end="3"/> 
-        <attribute description="Numero do lote remessa" length="4" begin="4" end="7"/> 
-        <attribute description="Tipo de registro" length="1" begin="8" end="8"/> 
-        <attribute description="Tipo de operação" length="1" begin="9" end="9"/> 
-        <attribute description="Tipo de serviço" length="2" begin="10" end="11"/> 
-        <attribute description="Reservado (uso Banco)" length="2" begin="12" end="13"/> 
-        <attribute description="Nº da versão do layout do lote" length="3" begin="14" end="16"/> 
-        <attribute description="Reservado (uso Banco)" length="1" begin="17" end="17"/> 
-        <attribute description="Tipo de inscrição da empresa" length="1" begin="18" end="18"/> 
-        <attribute description="Nº de inscrição da empresa" length="15" begin="19" end="33"/> 
-        <attribute description="Reservado (uso Banco)" length="20" begin="34" end="53"/> 
-        <attribute description="Código de Transmissão" length="15" begin="54" end="68"/> 
-        <attribute description="Reservado uso Banco" length="5" begin="69" end="73"/> 
-        <attribute description="Nome do Beneficiário" length="30" begin="74" end="103"/> 
-        <attribute description="Mensagem 1" length="40" begin="104" end="143"/> 
-        <attribute description="Mensagem 2" length="40" begin="144" end="183"/> 
-        <attribute description="Número remessa/retorno" length="8" begin="184" end="191"/> 
-        <attribute description="Data da gravação remessa/retorno" length="8" begin="192" end="199"/> 
-        <attribute description="Reservado (uso Banco)" length="41" begin="200" end="240"/> 
-    </layout>
-	
-    <layout layoutName="CNAB240" registerType="P">
+    <!-- segmento P -->
+    <layout layoutName="CNAB240" registerType="3" segmentType="P" isSegment="true">
         <attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
         <attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
         <attribute description="Tipo de registro" begin="8" end="8" length="1"/>
@@ -123,8 +102,9 @@
         <attribute description="Código da moeda" begin="228" end="229" length="2"/>
         <attribute description="Reservado (uso Banco)" begin="230" end="240" length="11"/>
     </layout>
-					
-    <layout layoutName="CNAB240" registerType="Q">
+                
+    <!-- segmento Q -->
+    <layout layoutName="CNAB240" registerType="3" segmentType="Q" isSegment="true">
         <attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
         <attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
         <attribute description="Tipo de registro" begin="8" end="8" length="1"/>
@@ -150,4 +130,54 @@
         <attribute description="Número do plano" begin="219" end="221" length="3"/>
         <attribute description="Reservado (uso Banco)" begin="222" end="240" length="19"/>
     </layout>
+    
+    <!-- segmento HEADER_LOTE -->
+    <layout layoutName="CNAB240" registerType="1" segmentType="" isSegment="false">
+        <attribute begin="1" end="3" description="Código do Banco na compensação" length="3"/>
+        <attribute begin="4" end="7" description="Numero do lote remessa" length="4"/>
+        <attribute begin="8" end="8" description="Tipo de registro" length="1"/>
+        <attribute begin="9" end="9" description="Tipo de operação" length="1"/>
+        <attribute begin="10" end="11" description="Tipo de serviço" length="2"/>
+        <attribute begin="12" end="13" description="Reservado (uso Banco)" length="2"/>
+        <attribute begin="14" end="16" description="Nº da versão do layout do lote" length="3"/>
+        <attribute begin="17" end="17" description="Reservado (uso Banco)" length="1"/>
+        <attribute begin="18" end="18" description="Tipo de inscrição da empresa" length="1"/>
+        <attribute begin="19" end="33" description="Nº de inscrição da empresa" length="15"/>
+        <attribute begin="34" end="53" description="Reservado (uso Banco)" length="20"/>
+        <attribute begin="54" end="68" description="Código de Transmissão" length="15"/>
+        <attribute begin="69" end="73" description="Reservado uso Banco" length="5"  />
+        <attribute begin="74" end="103" description="Nome do Beneficiário" length="30"/>
+        <attribute begin="104" end="143" description="Mensagem 1" length="40"/>
+        <attribute begin="144" end="183" description="Mensagem 2" length="40"/>
+        <attribute begin="184" end="191" description="Número remessa/retorno" length="8" />
+        <attribute begin="192" end="199" description="Data da gravação remessa/retorno" length="8"/>
+        <attribute begin="200" end="240" description="Reservado (uso Banco)" length="41"/>
+    </layout>
+
+    <layout layoutName="CNAB240" registerType="3" segmentType="U" isSegment="true">
+        <attribute begin="1" end="3" description="Código do Banco na compensação" length="3"/>
+        <attribute begin="4" end="7" description="Lote de serviço" length="4"/>
+        <attribute begin="8" end="8" description="Tipo de registro" length="1"/>
+        <attribute begin="9" end="13" description="Nº seqüencial do registro no lote" length="5"/>
+        <attribute begin="14" end="14" description="Cód. segmento do registro detalhe" length="1"/>
+        <attribute begin="15" end="15" description="Reservado (uso Banco)" length="1"/>
+        <attribute begin="16" end="17" description="Código de movimento (ocorrência)" length="2"/>
+        <attribute begin="18" end="32" description="Juros / Multa / Encargos" length="15"/>
+        <attribute begin="33" end="47" description="Valor do desconto concedido" length="15"/>
+        <attribute begin="48" end="62" description="Valor do Abatimento Concedido/Cancelado" length="15"/>
+        <attribute begin="63" end="77" description="Valor do IOF recolhido" length="15"/>
+        <attribute begin="78" end="92" description="Valor pago pelo Pagador" length="15"/>
+        <attribute begin="93" end="107" description="Valor liquido a ser creditado" length="15"/>
+        <attribute begin="108" end="122" description="Valor de outras despesas" length="15"/>
+        <attribute begin="123" end="137" description="Valor de outros créditos" length="15"/>
+        <attribute begin="138" end="145" description="Data da ocorrência" length="8"/>
+        <attribute begin="146" end="153" description="Data da efetivação do crédito" length="8"/>
+        <attribute begin="154" end="157" description="Código da ocorrência do Pagador" length="4"/>
+        <attribute begin="158" end="165" description="Data da ocorrência do Pagador" length="8"/>
+        <attribute begin="166" end="180" description="Valor da ocorrência do Pagador" length="15"/>
+        <attribute begin="181" end="210" description="Complemento da ocorrência do Pagador" length="30"/>
+        <attribute begin="211" end="213" description="Código do Banco correspondente compens." length="3"/>
+        <attribute begin="214" end="240" description="Reservado" length="27"/>
+    </layout>
+
 </layouts>

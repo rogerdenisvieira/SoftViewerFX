@@ -22,6 +22,12 @@ public class LayoutBean {
     
     @XStreamAsAttribute
     private String registerType;
+    
+    @XStreamAsAttribute
+    private String segmentType;
+    
+    @XStreamAsAttribute
+    private boolean isSegment;
 
     @XStreamImplicit
     @XStreamAlias("attribute")
@@ -67,6 +73,34 @@ public class LayoutBean {
      */
     public void setAttributes(List<AttributeBean> attributes) {
         this.attributes = attributes;
+    }
+
+    /**
+     * @return the segmentType
+     */
+    public String getSegmentType() {
+        return segmentType;
+    }
+
+    /**
+     * @param segmentType the segmentType to set
+     */
+    public void setSegmentType(String segmentType) {
+        this.segmentType = segmentType;
+    }
+
+    /**
+     * @return the isSegment
+     */
+    public boolean isIsSegment() {
+        return isSegment;
+    }
+
+    /**
+     * @param isSegment the isSegment to set
+     */
+    public void setIsSegment(boolean isSegment) {
+        this.isSegment = isSegment;
     }
 
 }

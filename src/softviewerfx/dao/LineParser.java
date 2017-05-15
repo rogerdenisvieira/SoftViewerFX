@@ -30,18 +30,19 @@ public class LineParser {
     private static final LayoutParser READER = new LayoutParser();
     private static String attributeValue;
 
-    public static ObservableList<DataBean> processLine(LineBean lineValue, String layoutName, String type) throws ParseException, LayoutNotFoundException {
+    public static ObservableList<DataBean> processLine(
+            LineBean lineValue,
+            String layoutName,
+            String registerType,
+            String segmentType) throws ParseException, LayoutNotFoundException {
 
         ObservableList<DataBean> values = FXCollections.observableArrayList();
 
         //busca o nome do módulo pela posição
         //String moduleName = lineValue.getLineValue().getValue().substring(beginModName, endModName);
-        
         //busca o layout pelo nome do módulo
-        LayoutBean foundLayout = READER.findLayout(layoutName, type);
+        LayoutBean foundLayout = READER.findLayout(layoutName, registerType, segmentType);
 
-
-        
         //verifica se o layout carregou
         if (foundLayout != null) {
             for (AttributeBean a : foundLayout.getAttributes()) {
@@ -50,7 +51,7 @@ public class LineParser {
                         "Layout: "
                         + layoutName
                         + "Tipo: "
-                        + type
+                        + registerType
                         + "Begin: "
                         + (a.getBegin() - 1)
                         + "End: "
@@ -66,12 +67,13 @@ public class LineParser {
             }
             return values;
         } else {
-           throw new LayoutNotFoundException("Layout for " + layoutName + " type " + type + " not found.");
+            throw new LayoutNotFoundException("Layout for " + layoutName + " type " + registerType + " not found.");
         }
     }
 
     //formata o valor a ser exibido conforme a descrição
     private static String formatValue(String descrString, String valueString) throws ParseException {
+
         //formata data
         if (descrString.contains("Data")) {
             SimpleDateFormat dateForm = new SimpleDateFormat("yyyyMMdd");
@@ -85,10 +87,12 @@ public class LineParser {
         for (String s : VALUESTOFORMAT) {
             if (descrString.contains(s)) {
                 DecimalFormat df = new DecimalFormat("#0.00");
+
                 valueString = "R$ " + df.format(new Double(valueString) / 100);
                 return valueString;
             }
         }
+
         return valueString;
     }
 }

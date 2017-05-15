@@ -124,8 +124,8 @@ public class AppLayoutController implements Initializable {
 
     @FXML
     public void processLineFocused() {
-        int begin, end;
-        String registerType, layoutName;
+        int beginRegisterType, endRegisterType, beginSegmentType, endSegmentType;
+        String segmentType, registerType, layoutName;
 
         //guarda o objeto referente à linha selecionada.
         LineBean lineValue = fileLinesTable.getSelectionModel().getSelectedItem();
@@ -141,27 +141,27 @@ public class AppLayoutController implements Initializable {
 
         System.out.println(lineValue.getLineValue().toString());
         try {
-            //resgata os índices dos segmentos
+            //resgata o tipo de registro baseado nos índices das configurações
             layoutName = settings[0];
-            begin = Integer.parseInt(settings[1]);
-            end = Integer.parseInt(settings[2]);
+            beginRegisterType = Integer.parseInt(settings[1]);
+            endRegisterType = Integer.parseInt(settings[2]);
+            
+            //resgata os segmentos dos registros baseados nos indices das configurações
+            beginSegmentType = Integer.parseInt(settings[3]);
+            endSegmentType = Integer.parseInt(settings[4]);
+                      
             
             int tableSize = fileLinesTable.getItems().size();
             
             //verificar se é HEADER, SEGMENTO ou TRAILER
-            if(selectedLineIndex == 0){
-                registerType = "HEADER_ARQUIVO";
-            } else if (selectedLineIndex == 1){
-                registerType = "HEADER_LOTE";
-            } else if (selectedLineIndex == tableSize - 2){
-                registerType = "TRAILER_LOTE";
-            } else if (selectedLineIndex == tableSize - 1 ){
-                registerType = "TRAILER_ARQUIVO";
-            } else {
-                registerType = lineValue.getLineValue().getValue().substring(begin, end);
-            }
+            registerType = lineValue.getLineValue().getValue().substring(beginRegisterType, endRegisterType);
+            segmentType = lineValue.getLineValue().getValue().substring(beginSegmentType, endSegmentType);
+            
+            System.out.println("tipo de registro " + registerType);
+            System.out.println("tipo de segmento " + segmentType);
                            
-            dataTable.setItems(LineParser.processLine(lineValue, layoutName, registerType));
+            dataTable.setItems(LineParser.processLine(lineValue, layoutName, registerType, segmentType));
+            
         } catch (Exception ex) {
             showAlert(ex);
         }
