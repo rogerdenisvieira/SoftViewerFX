@@ -125,10 +125,10 @@ public class AppLayoutController implements Initializable {
     @FXML
     public void processLineFocused() {
         int begin, end;
-        String type, layoutName;
+        String registerType, layoutName;
 
         //guarda o objeto referente à linha selecionada.
-        LineBean line = fileLinesTable.getSelectionModel().getSelectedItem();
+        LineBean lineValue = fileLinesTable.getSelectionModel().getSelectedItem();
         
         //busca o índice da linha selecionada
         int selectedLineIndex = fileLinesTable.getSelectionModel().getSelectedIndex();
@@ -139,7 +139,7 @@ public class AppLayoutController implements Initializable {
         //busca as configurações conforme a seleção do item
         String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
 
-        System.out.println(line.getLineValue().toString());
+        System.out.println(lineValue.getLineValue().toString());
         try {
             //resgata os índices dos segmentos
             layoutName = settings[0];
@@ -149,24 +149,19 @@ public class AppLayoutController implements Initializable {
             int tableSize = fileLinesTable.getItems().size();
             
             //verificar se é HEADER, SEGMENTO ou TRAILER
-            
             if(selectedLineIndex == 0){
-                type = "HEADER_ARQUIVO";
+                registerType = "HEADER_ARQUIVO";
             } else if (selectedLineIndex == 1){
-                type = "HEADER_LOTE";
+                registerType = "HEADER_LOTE";
             } else if (selectedLineIndex == tableSize - 2){
-                type = "TRAILER_LOTE";
+                registerType = "TRAILER_LOTE";
             } else if (selectedLineIndex == tableSize - 1 ){
-                type = "TRAILER_ARQUIVO";
+                registerType = "TRAILER_ARQUIVO";
             } else {
-                type = line.getLineValue().getValue().substring(begin, end);
+                registerType = lineValue.getLineValue().getValue().substring(begin, end);
             }
-            
-            System.out.println(selectedLineIndex);
-            System.out.println(type);
-            
-       
-            dataTable.setItems(LineParser.processLine(line, layoutName, type));
+                           
+            dataTable.setItems(LineParser.processLine(lineValue, layoutName, registerType));
         } catch (Exception ex) {
             showAlert(ex);
         }

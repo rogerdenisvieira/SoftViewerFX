@@ -53,7 +53,7 @@ public class LayoutParser {
         for (LayoutBean l : loadConfig().getLayouts()) {
             
             
-            if (l.getLayoutName().equals(layoutName) && l.getType().equals(type)) {
+            if (l.getLayoutName().equals(layoutName) && l.getRegisterType().equals(type)) {
                 foundLayout = l;
             }
         }

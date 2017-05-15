@@ -1,157 +1,153 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<layouts>
-    
-<layout layoutName="CNAB240" type="HEADER_ARQUIVO">
-		<attribute description="Código do Banco na compensação" length="3" begin="1" end="3"/>
-		<attribute description="Lote de serviço" length="4" begin="4" end="7"/>
-		<attribute description="Tipo de registro" length="1" begin="8" end="8"/>
-		<attribute description="Reservado (uso Banco)" length="8" begin="9" end="16"/>
-		<attribute description="Tipo de inscrição da empresa" length="1" begin="17" end="17"/>
-		<attribute description="Nº de inscrição da empresa" length="15" begin="18" end="32"/>
-		<attribute description="Código de Transmissão" length="15" begin="33" end="47"/>
-		<attribute description="Reservado (uso Banco)" length="25" begin="48" end="72"/>
-		<attribute description="Nome da empresa" length="30" begin="73" end="102"/>
-		<attribute description="Nome do Banco" length="30" begin="103" end="132"/>
-		<attribute description="Reservado (uso Banco)" length="10" begin="133" end="142"/>
-		<attribute description="Código remessa" length="1" begin="142" end="143"/>
-		<attribute description="Data de geração do arquivo" length="8" begin="144" end="151"/>
-		<attribute description="Reservado (uso Banco)" length="6" begin="152" end="157"/>
-		<attribute description="Nº seqüencial do arquivo" length="6" begin="158" end="163"/>
-		<attribute description="Nº da versão do layout do arquivo" length="3" begin="164" end="166"/>
-		<attribute description="Reservado (uso Banco)" length="74" begin="167" end="240"/>
-    </layout>
-
-    <layout layoutName="CNAB240" type="T">
+<layouts> 
+    <layout layoutName="CNAB240" registerType="HEADER_ARQUIVO">
         <attribute description="Código do Banco na compensação" length="3" begin="1" end="3"/>
-<attribute description="Numero do lote retorno" length="4" begin="4" end="7"/>
-<attribute description="Tipo de registro" length="1" begin="8" end="8"/>
-<attribute description="Nº sequencial do registro no lote" length="5" begin="9" end="13"/>
-<attribute description="Cód. segmento do registro detalhe" length="1" begin="14" end="14"/>
-<attribute description="Reservado (uso Banco) " length="1" begin="15" end="15"/>
-<attribute description="Código de movimento (ocorrência)" length="2" begin="16" end="17"/>
-<attribute description="Agência do Beneficiário " length="4" begin="18" end="21"/>
-<attribute description="Dígito da Agência do Beneficiário" length="1" begin="22" end="22"/>
-<attribute description="Número da conta corrente " length="9" begin="23" end="31"/>
-<attribute description="Dígito verificador da conta" length="1" begin="32" end="32"/>
-<attribute description="Reservado (uso Banco)" length="8" begin="33" end="40"/>
-<attribute description="Identificação do título no Banco" length="13" begin="41" end="53"/>
-<attribute description="Código da carteira" length="1" begin="54" end="54"/>
-<attribute description="Nº do documento de cobrança" length="15" begin="55" end="69"/>
-<attribute description="Data do vencimento do título" length="8" begin="70" end="77"/>
-<attribute description="Valor nominal do título" length="15" begin="78" end="92"/>
-<attribute description="Nº do Banco Cobrador / Recebedor" length="3" begin="93" end="95"/>
-<attribute description="Agência Cobradora / Recebedora " length="4" begin="96" end="99"/>
-<attribute description="Dígito da Agência do Beneficiário" length="1" begin="100" end="100"/>
-<attribute description="Identif. do título na empresa" length="25" begin="101" end="125"/>
-<attribute description="Código da moeda" length="2" begin="126" end="127"/>
-<attribute description="Tipo de inscrição Pagador" length="1" begin="128" end="128"/>
-<attribute description="Número de inscrição Pagador" length="15" begin="129" end="143"/>
-<attribute description="Nome do Pagador" length="40" begin="144" end="183"/>
-<attribute description="Conta Cobrança " length="10" begin="184" end="193"/>
-<attribute description="Valor da Tarifa/Custas" length="15" begin="194" end="208"/>
-<attribute description="dentificação para rejeições, tarifas, custas, liquidações e baixas, " length="10" begin="209" end="218"/>
-<attribute description="Reservado (uso Banco)" length="22" begin="219" end="240"/>
+        <attribute description="Lote de serviço" length="4" begin="4" end="7"/>
+        <attribute description="Tipo de registro" length="1" begin="8" end="8"/>
+        <attribute description="Reservado (uso Banco)" length="8" begin="9" end="16"/>
+        <attribute description="Tipo de inscrição da empresa" length="1" begin="17" end="17"/>
+        <attribute description="Nº de inscrição da empresa" length="15" begin="18" end="32"/>
+        <attribute description="Código de Transmissão" length="15" begin="33" end="47"/>
+        <attribute description="Reservado (uso Banco)" length="25" begin="48" end="72"/>
+        <attribute description="Nome da empresa" length="30" begin="73" end="102"/>
+        <attribute description="Nome do Banco" length="30" begin="103" end="132"/>
+        <attribute description="Reservado (uso Banco)" length="10" begin="133" end="142"/>
+        <attribute description="Código remessa" length="1" begin="142" end="143"/>
+        <attribute description="Data de geração do arquivo" length="8" begin="144" end="151"/>
+        <attribute description="Reservado (uso Banco)" length="6" begin="152" end="157"/>
+        <attribute description="Nº seqüencial do arquivo" length="6" begin="158" end="163"/>
+        <attribute description="Nº da versão do layout do arquivo" length="3" begin="164" end="166"/>
+        <attribute description="Reservado (uso Banco)" length="74" begin="167" end="240"/>
+    </layout>
 
-        
-        
+    <layout layoutName="CNAB240" registerType="T">
+        <attribute description="Código do Banco na compensação" length="3" begin="1" end="3"/>
+        <attribute description="Numero do lote retorno" length="4" begin="4" end="7"/>
+        <attribute description="Tipo de registro" length="1" begin="8" end="8"/>
+        <attribute description="Nº sequencial do registro no lote" length="5" begin="9" end="13"/>
+        <attribute description="Cód. segmento do registro detalhe" length="1" begin="14" end="14"/>
+        <attribute description="Reservado (uso Banco) " length="1" begin="15" end="15"/>
+        <attribute description="Código de movimento (ocorrência)" length="2" begin="16" end="17"/>
+        <attribute description="Agência do Beneficiário " length="4" begin="18" end="21"/>
+        <attribute description="Dígito da Agência do Beneficiário" length="1" begin="22" end="22"/>
+        <attribute description="Número da conta corrente " length="9" begin="23" end="31"/>
+        <attribute description="Dígito verificador da conta" length="1" begin="32" end="32"/>
+        <attribute description="Reservado (uso Banco)" length="8" begin="33" end="40"/>
+        <attribute description="Identificação do título no Banco" length="13" begin="41" end="53"/>
+        <attribute description="Código da carteira" length="1" begin="54" end="54"/>
+        <attribute description="Nº do documento de cobrança" length="15" begin="55" end="69"/>
+        <attribute description="Data do vencimento do título" length="8" begin="70" end="77"/>
+        <attribute description="Valor nominal do título" length="15" begin="78" end="92"/>
+        <attribute description="Nº do Banco Cobrador / Recebedor" length="3" begin="93" end="95"/>
+        <attribute description="Agência Cobradora / Recebedora " length="4" begin="96" end="99"/>
+        <attribute description="Dígito da Agência do Beneficiário" length="1" begin="100" end="100"/>
+        <attribute description="Identif. do título na empresa" length="25" begin="101" end="125"/>
+        <attribute description="Código da moeda" length="2" begin="126" end="127"/>
+        <attribute description="Tipo de inscrição Pagador" length="1" begin="128" end="128"/>
+        <attribute description="Número de inscrição Pagador" length="15" begin="129" end="143"/>
+        <attribute description="Nome do Pagador" length="40" begin="144" end="183"/>
+        <attribute description="Conta Cobrança " length="10" begin="184" end="193"/>
+        <attribute description="Valor da Tarifa/Custas" length="15" begin="194" end="208"/>
+        <attribute description="dentificação para rejeições, tarifas, custas, liquidações e baixas, " length="10" begin="209" end="218"/>
+        <attribute description="Reservado (uso Banco)" length="22" begin="219" end="240"/>
     </layout>
 
 
 
-	<layout layoutName="CNAB240" type="R">
-		<attribute description="Código do Banco na compensação"	length="3" begin="1" end="3"/> 
-		<attribute description="Numero do lote remessa" length="4" begin="4" end="7"/> 
-		<attribute description="Tipo de registro" length="1" begin="8" end="8"/> 
-		<attribute description="Tipo de operação" length="1" begin="9" end="9"/> 
-		<attribute description="Tipo de serviço" length="2" begin="10" end="11"/> 
-		<attribute description="Reservado (uso Banco)" length="2" begin="12" end="13"/> 
-		<attribute description="Nº da versão do layout do lote" length="3" begin="14" end="16"/> 
-		<attribute description="Reservado (uso Banco)" length="1" begin="17" end="17"/> 
-		<attribute description="Tipo de inscrição da empresa" length="1" begin="18" end="18"/> 
-		<attribute description="Nº de inscrição da empresa" length="15" begin="19" end="33"/> 
-		<attribute description="Reservado (uso Banco)" length="20" begin="34" end="53"/> 
-		<attribute description="Código de Transmissão" length="15" begin="54" end="68"/> 
-		<attribute description="Reservado uso Banco" length="5" begin="69" end="73"/> 
-		<attribute description="Nome do Beneficiário" length="30" begin="74" end="103"/> 
-		<attribute description="Mensagem 1" length="40" begin="104" end="143"/> 
-		<attribute description="Mensagem 2" length="40" begin="144" end="183"/> 
-		<attribute description="Número remessa/retorno" length="8" begin="184" end="191"/> 
-		<attribute description="Data da gravação remessa/retorno" length="8" begin="192" end="199"/> 
-		<attribute description="Reservado (uso Banco)" length="41" begin="200" end="240"/> 
-	</layout>
+    <layout layoutName="CNAB240" registerType="R">
+        <attribute description="Código do Banco na compensação"	length="3" begin="1" end="3"/> 
+        <attribute description="Numero do lote remessa" length="4" begin="4" end="7"/> 
+        <attribute description="Tipo de registro" length="1" begin="8" end="8"/> 
+        <attribute description="Tipo de operação" length="1" begin="9" end="9"/> 
+        <attribute description="Tipo de serviço" length="2" begin="10" end="11"/> 
+        <attribute description="Reservado (uso Banco)" length="2" begin="12" end="13"/> 
+        <attribute description="Nº da versão do layout do lote" length="3" begin="14" end="16"/> 
+        <attribute description="Reservado (uso Banco)" length="1" begin="17" end="17"/> 
+        <attribute description="Tipo de inscrição da empresa" length="1" begin="18" end="18"/> 
+        <attribute description="Nº de inscrição da empresa" length="15" begin="19" end="33"/> 
+        <attribute description="Reservado (uso Banco)" length="20" begin="34" end="53"/> 
+        <attribute description="Código de Transmissão" length="15" begin="54" end="68"/> 
+        <attribute description="Reservado uso Banco" length="5" begin="69" end="73"/> 
+        <attribute description="Nome do Beneficiário" length="30" begin="74" end="103"/> 
+        <attribute description="Mensagem 1" length="40" begin="104" end="143"/> 
+        <attribute description="Mensagem 2" length="40" begin="144" end="183"/> 
+        <attribute description="Número remessa/retorno" length="8" begin="184" end="191"/> 
+        <attribute description="Data da gravação remessa/retorno" length="8" begin="192" end="199"/> 
+        <attribute description="Reservado (uso Banco)" length="41" begin="200" end="240"/> 
+    </layout>
 	
-	<layout layoutName="CNAB240" type="P">
-		<attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
-		<attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
-		<attribute description="Tipo de registro" begin="8" end="8" length="1"/>
-		<attribute description="Nº seqüencial do registro de lote" begin="9" end="13" length="5"/>
-		<attribute description="Cód. Segmento do registro detalhe" begin="14" end="14" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="15" end="15" length="1"/>
-		<attribute description="Código de movimento remessa" begin="16" end="17" length="2"/>
-		<attribute description="Agência do Destinatária FIDC" begin="18" end="21" length="4"/>
-		<attribute description="Dígito da Ag do Destinatária FIDC" begin="22" end="22" length="1"/>
-		<attribute description="Número da conta corrente" begin="23" end="31" length="9"/>
-		<attribute description="Dígito verificador da conta" begin="32" end="32" length="1"/>
-		<attribute description="Conta cobrança Destinatária FIDC" begin="33" end="41" length="9"/>
-		<attribute description="Dígito da conta cobrança Destinatária FIDC" begin="42" end="42" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="43" end="44" length="2"/>
-		<attribute description="Identificação do título no Banco" begin="45" end="57" length="13"/>
-		<attribute description="Tipo de cobrança" begin="58" end="58" length="1"/>
-		<attribute description="Forma de Cadastramento" begin="59" end="59" length="1"/>
-		<attribute description="Tipo de documento" begin="60" end="60" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="61" end="61" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="62" end="62" length="1"/>
-		<attribute description="Nº do documento" begin="63" end="77" length="15"/>
-		<attribute description="Data de vencimento do título" begin="78" end="85" length="8"/>
-		<attribute description="Valor nominal do título" begin="86" end="100" length="15"/>
-		<attribute description="Agência encarregada da cobrança" begin="101" end="104" length="4"/>
-		<attribute description="Dígito da Agência do Beneficiário" begin="105" end="105" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="106" end="106" length="1"/>
-		<attribute description="Espécie do título" begin="107" end="108" length="2"/>
-		<attribute description="Identif. de título Aceito/Não Aceito" begin="109" end="109" length="1"/>
-		<attribute description="Data da emissão do título" begin="110" end="117" length="8"/>
-		<attribute description="Código do juros de mora" begin="118" end="118" length="1"/>
-		<attribute description="Data do juros de mora" begin="119" end="126" length="8"/>
-		<attribute description="Valor da mora/dia ou Taxa mensal" begin="127" end="141" length="15"/>
-		<attribute description="Código do desconto 1" begin="142" end="142" length="1"/>
-		<attribute description="Data de desconto 1" begin="143" end="150" length="8"/>
-		<attribute description="Valor ou Percentual do desconto concedido" begin="151" end="165" length="15"/>
-		<attribute description="Valor do IOF a ser recolhido" begin="166" end="180" length="15"/>
-		<attribute description="Valor do abatimento" begin="181" end="195" length="15"/>
-		<attribute description="Identificação do título na empresa" begin="196" end="220" length="25"/>
-		<attribute description="Código para protesto" begin="221" end="221" length="1"/>
-		<attribute description="Número de dias para protesto" begin="222" end="223" length="2"/>
-		<attribute description="Código para Baixa/Devolução" begin="224" end="224" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="225" end="225" length="1"/>
-		<attribute description="Número de dias para Baixa/Devolução" begin="226" end="227" length="2"/>
-		<attribute description="Código da moeda" begin="228" end="229" length="2"/>
-		<attribute description="Reservado (uso Banco)" begin="230" end="240" length="11"/>
-	</layout>
+    <layout layoutName="CNAB240" registerType="P">
+        <attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
+        <attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
+        <attribute description="Tipo de registro" begin="8" end="8" length="1"/>
+        <attribute description="Nº seqüencial do registro de lote" begin="9" end="13" length="5"/>
+        <attribute description="Cód. Segmento do registro detalhe" begin="14" end="14" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="15" end="15" length="1"/>
+        <attribute description="Código de movimento remessa" begin="16" end="17" length="2"/>
+        <attribute description="Agência do Destinatária FIDC" begin="18" end="21" length="4"/>
+        <attribute description="Dígito da Ag do Destinatária FIDC" begin="22" end="22" length="1"/>
+        <attribute description="Número da conta corrente" begin="23" end="31" length="9"/>
+        <attribute description="Dígito verificador da conta" begin="32" end="32" length="1"/>
+        <attribute description="Conta cobrança Destinatária FIDC" begin="33" end="41" length="9"/>
+        <attribute description="Dígito da conta cobrança Destinatária FIDC" begin="42" end="42" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="43" end="44" length="2"/>
+        <attribute description="Identificação do título no Banco" begin="45" end="57" length="13"/>
+        <attribute description="Tipo de cobrança" begin="58" end="58" length="1"/>
+        <attribute description="Forma de Cadastramento" begin="59" end="59" length="1"/>
+        <attribute description="Tipo de documento" begin="60" end="60" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="61" end="61" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="62" end="62" length="1"/>
+        <attribute description="Nº do documento" begin="63" end="77" length="15"/>
+        <attribute description="Data de vencimento do título" begin="78" end="85" length="8"/>
+        <attribute description="Valor nominal do título" begin="86" end="100" length="15"/>
+        <attribute description="Agência encarregada da cobrança" begin="101" end="104" length="4"/>
+        <attribute description="Dígito da Agência do Beneficiário" begin="105" end="105" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="106" end="106" length="1"/>
+        <attribute description="Espécie do título" begin="107" end="108" length="2"/>
+        <attribute description="Identif. de título Aceito/Não Aceito" begin="109" end="109" length="1"/>
+        <attribute description="Data da emissão do título" begin="110" end="117" length="8"/>
+        <attribute description="Código do juros de mora" begin="118" end="118" length="1"/>
+        <attribute description="Data do juros de mora" begin="119" end="126" length="8"/>
+        <attribute description="Valor da mora/dia ou Taxa mensal" begin="127" end="141" length="15"/>
+        <attribute description="Código do desconto 1" begin="142" end="142" length="1"/>
+        <attribute description="Data de desconto 1" begin="143" end="150" length="8"/>
+        <attribute description="Valor ou Percentual do desconto concedido" begin="151" end="165" length="15"/>
+        <attribute description="Valor do IOF a ser recolhido" begin="166" end="180" length="15"/>
+        <attribute description="Valor do abatimento" begin="181" end="195" length="15"/>
+        <attribute description="Identificação do título na empresa" begin="196" end="220" length="25"/>
+        <attribute description="Código para protesto" begin="221" end="221" length="1"/>
+        <attribute description="Número de dias para protesto" begin="222" end="223" length="2"/>
+        <attribute description="Código para Baixa/Devolução" begin="224" end="224" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="225" end="225" length="1"/>
+        <attribute description="Número de dias para Baixa/Devolução" begin="226" end="227" length="2"/>
+        <attribute description="Código da moeda" begin="228" end="229" length="2"/>
+        <attribute description="Reservado (uso Banco)" begin="230" end="240" length="11"/>
+    </layout>
 					
-	<layout layoutName="CNAB240" type="Q">
-		<attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
-		<attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
-		<attribute description="Tipo de registro" begin="8" end="8" length="1"/>
-		<attribute description="Nº seqüencial do registro no lote" begin="9" end="13" length="5"/>
-		<attribute description="Cód. segmento do registro detalhe" begin="14" end="14" length="1"/>
-		<attribute description="Reservado (uso Banco)" begin="15" end="15" length="1"/>
-		<attribute description="Código de movimento remessa" begin="16" end="17" length="2"/>
-		<attribute description="Tipo de inscrição do Pagador" begin="18" end="18" length="1"/>
-		<attribute description="Número de inscrição do Pagador" begin="19" end="33" length="15"/>
-		<attribute description="Nome Pagador" begin="34" end="73" length="40"/>
-		<attribute description="Endereço Pagador" begin="74" end="113" length="40"/>
-		<attribute description="Bairro Pagador" begin="114" end="128" length="15"/>
-		<attribute description="Cep Pagador" begin="129" end="133" length="5"/>
-		<attribute description="Sufixo do Cep do Pagador" begin="134" end="136" length="3"/>
-		<attribute description="Cidade do Pagador" begin="137" end="151" length="15"/>
-		<attribute description="Unidade da federação do Pagador" begin="152" end="153" length="2"/>
-		<attribute description="Tipo de inscrição Sacador/avalista" begin="154" end="154" length="1"/>
-		<attribute description="Nº de inscrição Sacador/avalista" begin="155" end="169" length="15"/>
-		<attribute description="Nome do Sacador/avalista" begin="170" end="209" length="40"/>
-		<attribute description="Identificador de carne" begin="210" end="212" length="3"/>
-		<attribute description="Seqüencial da Parcela ou número inicial da parcela" begin="213" end="215" length="3"/>
-		<attribute description="Quantidade total de parcelas" begin="216" end="218" length="3"/>
-		<attribute description="Número do plano" begin="219" end="221" length="3"/>
-		<attribute description="Reservado (uso Banco)" begin="222" end="240" length="19"/>
-	</layout>
+    <layout layoutName="CNAB240" registerType="Q">
+        <attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
+        <attribute description="Numero do lote remessa" begin="4" end="7" length="4"/>
+        <attribute description="Tipo de registro" begin="8" end="8" length="1"/>
+        <attribute description="Nº seqüencial do registro no lote" begin="9" end="13" length="5"/>
+        <attribute description="Cód. segmento do registro detalhe" begin="14" end="14" length="1"/>
+        <attribute description="Reservado (uso Banco)" begin="15" end="15" length="1"/>
+        <attribute description="Código de movimento remessa" begin="16" end="17" length="2"/>
+        <attribute description="Tipo de inscrição do Pagador" begin="18" end="18" length="1"/>
+        <attribute description="Número de inscrição do Pagador" begin="19" end="33" length="15"/>
+        <attribute description="Nome Pagador" begin="34" end="73" length="40"/>
+        <attribute description="Endereço Pagador" begin="74" end="113" length="40"/>
+        <attribute description="Bairro Pagador" begin="114" end="128" length="15"/>
+        <attribute description="Cep Pagador" begin="129" end="133" length="5"/>
+        <attribute description="Sufixo do Cep do Pagador" begin="134" end="136" length="3"/>
+        <attribute description="Cidade do Pagador" begin="137" end="151" length="15"/>
+        <attribute description="Unidade da federação do Pagador" begin="152" end="153" length="2"/>
+        <attribute description="Tipo de inscrição Sacador/avalista" begin="154" end="154" length="1"/>
+        <attribute description="Nº de inscrição Sacador/avalista" begin="155" end="169" length="15"/>
+        <attribute description="Nome do Sacador/avalista" begin="170" end="209" length="40"/>
+        <attribute description="Identificador de carne" begin="210" end="212" length="3"/>
+        <attribute description="Seqüencial da Parcela ou número inicial da parcela" begin="213" end="215" length="3"/>
+        <attribute description="Quantidade total de parcelas" begin="216" end="218" length="3"/>
+        <attribute description="Número do plano" begin="219" end="221" length="3"/>
+        <attribute description="Reservado (uso Banco)" begin="222" end="240" length="19"/>
+    </layout>
 </layouts>

@@ -21,7 +21,7 @@ public class LayoutBean {
     private String layoutName;
     
     @XStreamAsAttribute
-    private String type;
+    private String registerType;
 
     @XStreamImplicit
     @XStreamAlias("attribute")
@@ -44,15 +44,15 @@ public class LayoutBean {
     /**
      * @return the type
      */
-    public String getType() {
-        return type;
+    public String getRegisterType() {
+        return registerType;
     }
 
     /**
      * @param type the type to set
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setRegisterType(String type) {
+        this.registerType = type;
     }
 
     /**
