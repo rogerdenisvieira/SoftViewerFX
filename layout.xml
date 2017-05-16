@@ -53,7 +53,6 @@
         <attribute description="Reservado (uso Banco)" length="22" begin="219" end="240"/>
     </layout>
 
-
     <!-- segmento P -->
     <layout layoutName="CNAB240" registerType="3" segmentType="P" isSegment="true">
         <attribute description="Código do Banco na compensação" begin="1" end="3" length="3"/>
@@ -179,5 +178,62 @@
         <attribute begin="211" end="213" description="Código do Banco correspondente compens." length="3"/>
         <attribute begin="214" end="240" description="Reservado" length="27"/>
     </layout>
-
+    
+    <layout layoutName="CNAB400_RETORNO" registerType="0" segmentType="" isSegment="false">
+        <attribute description="Identificador do Registro do Header" begin="1" end="1" length="1"/>
+        <attribute description="Identificador do Arquivo de Remessa ou Retorno" begin="2" end="2" length="1"/>
+        <attribute description="Identificador por Extenso do Arquivo de Remessa ou Retorno" begin="3" end="9" length="7"/>
+        <attribute description="Identificação do Tipo de Serviço" begin="10" end="11" length="2"/>
+        <attribute description="Identificador por Extenso do Tipo de Serviço" begin="12" end="26" length="15"/>
+        <attribute description="Brancos" begin="27" end="46" length="20"/>
+        <attribute description="Nome por Extenso da Empresa" begin="47" end="76" length="30"/>
+        <attribute description="Identificação do Banco" begin="77" end="79" length="3"/>
+        <attribute description="Nome por Extenso do Banco" begin="80" end="99" length="20"/>
+        <attribute description="Data da Gravação do Arquivo" begin="100" end="105" length="6"/>
+        <attribute description="Complemento do Tamanho do Registro" begin="106" end="389" length="284"/>
+        <attribute description="Identificação do Layout" begin="390" end="395" length="5"/>
+        <attribute description="Numero Sequencial do Registro no Arquivo" begin="395" end="400" length="6"/>
+    </layout>
+    
+    <layout layoutName="CNAB400_RETORNO" registerType="1" segmentType="" isSegment="false">
+        <attribute description="Identificador do Registro Detalhe" begin="1" end="1" length="1"/>
+        <attribute description="Identificador do Tipo de Inscrição da Empresa" begin="2" end="3" length="2"/>
+        <attribute description="Número de Inscrição da Empresa" begin="4" end="17" length="14"/>
+        <attribute description="Brancos" begin="18" end="37" length="20"/>
+        <attribute description="Número Atribuído pela Empresa" begin="38" end="62" length="25"/>
+        <attribute description="Nosso Número Atribuido pelo Banco Votorantim" begin="63" end="72" length="10"/>
+        <attribute description="Nosso Número Impresso no Boleto Físico" begin="73" end="97" length="25"/>
+        <attribute description="Número da Carteira" begin="98" end="100" length="3"/>
+        <attribute description="Identificação da Ocorrência" begin="101" end="102" length="2"/>
+        <attribute description="Zeros" begin="103" end="110" length="8"/>
+        <attribute description="Data da Ocorrência" begin="111" end="116" length="6"/>
+        <attribute description="Número da Duplicata" begin="117" end="126" length="10"/>
+        <attribute description="Brancos" begin="127" end="146" length="20"/>
+        <attribute description="Data do Vencimento do Título" begin="147" end="152" length="6"/>
+        <attribute description="Valor Nominal do Título" begin="153" end="163" length="11"/>
+        <attribute description="Número COMP do Banco Cobrador" begin="166" end="168" length="3"/>
+        <attribute description="Agência Cobradora, Liquidação ou Baixa" begin="169" end="173" length="5"/>
+        <attribute description="Identificação da Espécie do Título" begin="174" end="175" length="2"/>
+        <attribute description="Tarifa de Cobrança" begin="176" end="186" length="11"/>
+        <attribute description="Outras Despesas" begin="189" end="199" length="11"/>
+        <attribute description="Zeros" begin="202" end="212" length="11"/>
+        <attribute description="Valor IOF" begin="215" end="225" length="11"/>
+        <attribute description="Valor do Abatimento Concedido" begin="228" end="238" length="11"/>
+        <attribute description="Valor do Desconto Concedido" begin="241" end="251" length="11"/>
+        <attribute description="Valor Principal" begin="254" end="264" length="11"/>
+        <attribute description="Valor de Mora e Multas Pagas pelo Sacado" begin="267" end="277" length="11"/>
+        <attribute description="Valor de Outros Créditos" begin="280" end="290" length="11"/>
+        <attribute description="Brancos" begin="293" end="295" length="3"/>
+        <attribute description="Data do Crédito" begin="296" end="301" length="6"/>
+        <attribute description="Código da Instrução Cancelada" begin="302" end="303" length="2"/>
+        <attribute description="Zeros" begin="304" end="313" length="10"/>
+        <attribute description="Nome do Sacado" begin="314" end="353" length="40"/>
+        <attribute description="Zeros" begin="354" end="364" length="11"/>
+        <attribute description="Erros - Registros Rejeitados ou Alegação do Sacado" begin="367" end="374" length="8"/>
+        <attribute description="Zeros" begin="375" end="376" length="2"/>
+        <attribute description="Código de Liquidação" begin="377" end="378" length="2"/>
+        <attribute description="Zeros" begin="379" end="394" length="16"/>
+        <attribute description="Número Sequencial do Registro no Arquivo" begin="395" end="400" length="6"/>
+    </layout>
+    
 </layouts>

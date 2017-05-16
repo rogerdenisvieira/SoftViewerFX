@@ -41,11 +41,10 @@ public class SettingsParser {
             //itera sobre cada chave-valor
             while (e.hasMoreElements()) {
                 String key = (String) e.nextElement();
-                String value = prop.getProperty(key);
-                settingsValues.add(value.split(";"));  
-                Collections.reverse(settingsValues);
+                String value = prop.getProperty(key);               
+                settingsValues.add(value.split(";"));                 
             }
-            
+            Collections.reverse(settingsValues);
             return settingsValues;
 
         } catch (Exception e) {

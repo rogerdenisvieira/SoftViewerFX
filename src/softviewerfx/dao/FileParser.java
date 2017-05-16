@@ -37,7 +37,6 @@ public class FileParser {
 
         try {
             while ((thisLineValue = reader.readLine()) != null) {
-//                if (thisLine.charAt(thisLine.length() - 1) == '#') {
                 this.fileLines.add(new LineBean(
                         new SimpleStringProperty(String.valueOf(thisLinexindex)),
                         new SimpleStringProperty(thisLineValue)

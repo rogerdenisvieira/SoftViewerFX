@@ -23,7 +23,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -48,6 +47,7 @@ public class AppLayoutController implements Initializable {
     private FileChooser fileChooser;
     private FileParser fileProcessor;
     private static File fileInUse;
+    private static int selectedDDLIndex;
 
     @FXML
     private Label filePathLabel;
@@ -129,39 +129,41 @@ public class AppLayoutController implements Initializable {
 
         //guarda o objeto referente à linha selecionada.
         LineBean lineValue = fileLinesTable.getSelectionModel().getSelectedItem();
-        
+
         //busca o índice da linha selecionada
         int selectedLineIndex = fileLinesTable.getSelectionModel().getSelectedIndex();
 
-        //busca o índice selecionado do combobox
-        int selectedDDLIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
-
         //busca as configurações conforme a seleção do item
+        //String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
         String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
 
-        System.out.println(lineValue.getLineValue().toString());
+        for (String s : settings) {
+            System.out.println(s);
+        }
+
         try {
             //resgata o tipo de registro baseado nos índices das configurações
-            layoutName = settings[0];
-            beginRegisterType = Integer.parseInt(settings[1]);
-            endRegisterType = Integer.parseInt(settings[2]);
-            
+            layoutName = settings[1];
+            beginRegisterType = Integer.parseInt(settings[2]);
+            endRegisterType = Integer.parseInt(settings[3]);
+
             //resgata os segmentos dos registros baseados nos indices das configurações
-            beginSegmentType = Integer.parseInt(settings[3]);
-            endSegmentType = Integer.parseInt(settings[4]);
-                      
-            
-            int tableSize = fileLinesTable.getItems().size();
-            
+            beginSegmentType = Integer.parseInt(settings[4]);
+            endSegmentType = Integer.parseInt(settings[5]);
+
             //verificar se é HEADER, SEGMENTO ou TRAILER
             registerType = lineValue.getLineValue().getValue().substring(beginRegisterType, endRegisterType);
             segmentType = lineValue.getLineValue().getValue().substring(beginSegmentType, endSegmentType);
-            
-            System.out.println("tipo de registro " + registerType);
-            System.out.println("tipo de segmento " + segmentType);
-                           
+
+            System.out.println(
+                    "Valor da linha: " + lineValue.getLineValue().toString()
+                    + "Índice do DDL: " + selectedDDLIndex
+                    + "Nome layout: " + layoutName
+                    + "Tipo de registro: " + registerType
+                    + "Tipo de segmento: " + segmentType);
+
             dataTable.setItems(LineParser.processLine(lineValue, layoutName, registerType, segmentType));
-            
+
         } catch (Exception ex) {
             showAlert(ex);
         }
@@ -233,6 +235,9 @@ public class AppLayoutController implements Initializable {
                 this.spinGoToLine.setDisable(false);
                 this.spinGoToLine.setEditable(true);
                 this.spinGoToLine = new Spinner(0, fileLinesTable.getItems().size(), 0);
+
+                //busca o índice selecionado do combobox
+                selectedDDLIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
             } catch (FileNotFoundException ex) {
                 showAlert(ex);
             }

@@ -47,15 +47,15 @@ public class LineParser {
         if (foundLayout != null) {
             for (AttributeBean a : foundLayout.getAttributes()) {
 
-                System.out.println(
-                        "Layout: "
-                        + layoutName
-                        + "Tipo: "
-                        + registerType
-                        + "Begin: "
-                        + (a.getBegin() - 1)
-                        + "End: "
-                        + a.getEnd());
+//                System.out.println(
+//                        "Layout: "
+//                        + layoutName
+//                        + "Tipo: "
+//                        + registerType
+//                        + "Begin: "
+//                        + (a.getBegin() - 1)
+//                        + "End: "
+//                        + a.getEnd());
 
                 attributeValue = lineValue.getLineValue().getValue().substring(a.getBegin() - 1, a.getEnd());
 
@@ -76,9 +76,9 @@ public class LineParser {
 
         //formata data
         if (descrString.contains("Data")) {
-            SimpleDateFormat dateForm = new SimpleDateFormat("yyyyMMdd");
+            SimpleDateFormat dateForm = new SimpleDateFormat("ddMMyy");
             Date date = dateForm.parse(valueString);
-            dateForm.applyPattern("dd/MM/yyyy");
+            dateForm.applyPattern("dd/MM/yy");
             valueString = dateForm.format(date);
             return valueString;
         }
