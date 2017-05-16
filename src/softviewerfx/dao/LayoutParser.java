@@ -22,8 +22,6 @@ public class LayoutParser {
     public final String FILE_PATH = "layout.xml";
 
     public LayoutParser() {
-        //this.layoutFile = new File(FILE_PATH);
-
         layoutFile = new File(FILE_PATH);
     }
 
@@ -46,13 +44,13 @@ public class LayoutParser {
         return layouts;
     }
 
-    // busca o layout específico pelo nome do módulo
+    //find layout by its name, type of register and type of segment
     public LayoutBean findLayout(String layoutName, String registerType, String segmentType) {
 
         LayoutBean foundLayout = null;
         for (LayoutBean l : loadConfig().getLayouts()) {
-            //fazer um IF para verificar se é segmento
 
+            //check if register is a segment or other kind of register
             if (l.isIsSegment()) {
                 if (l.getLayoutName().equals(layoutName) && l.getRegisterType().equals(registerType) && l.getSegmentType().equals(segmentType)) {
                     foundLayout = l;

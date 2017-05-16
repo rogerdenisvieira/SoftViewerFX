@@ -127,14 +127,10 @@ public class AppLayoutController implements Initializable {
         int beginRegisterType, endRegisterType, beginSegmentType, endSegmentType;
         String segmentType, registerType, layoutName;
 
-        //guarda o objeto referente à linha selecionada.
+        //saves an object that represents focused line.
         LineBean lineValue = fileLinesTable.getSelectionModel().getSelectedItem();
 
-        //busca o índice da linha selecionada
-        int selectedLineIndex = fileLinesTable.getSelectionModel().getSelectedIndex();
-
-        //busca as configurações conforme a seleção do item
-        //String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
+        //searchs for settings according by dropdown selection
         String[] settings = settingsReader.readSettings().get(selectedDDLIndex);
 
         for (String s : settings) {
@@ -142,17 +138,21 @@ public class AppLayoutController implements Initializable {
         }
 
         try {
-            //resgata o tipo de registro baseado nos índices das configurações
+            //retrieve layout name based on its value in settings file
             layoutName = settings[1];
+            
+            //save register's indexes from settings file
             beginRegisterType = Integer.parseInt(settings[2]);
             endRegisterType = Integer.parseInt(settings[3]);
 
-            //resgata os segmentos dos registros baseados nos indices das configurações
+            //save segment's indexes from settings file
             beginSegmentType = Integer.parseInt(settings[4]);
             endSegmentType = Integer.parseInt(settings[5]);
 
-            //verificar se é HEADER, SEGMENTO ou TRAILER
+            //retrieve register in focused line based on its indexes in settings file
             registerType = lineValue.getLineValue().getValue().substring(beginRegisterType, endRegisterType);
+            
+            //retrieve segment in focused line based on its indexes in settings file
             segmentType = lineValue.getLineValue().getValue().substring(beginSegmentType, endSegmentType);
 
             System.out.println(
@@ -169,6 +169,7 @@ public class AppLayoutController implements Initializable {
         }
     }
 
+    // @TODO
     @FXML
     public void processGoTo() {
         System.out.println("clicou em Go To");
@@ -177,24 +178,25 @@ public class AppLayoutController implements Initializable {
         dialog.setHeaderText("Look, a Text Input Dialog");
         dialog.setContentText("Please enter your name:");
 
-// Traditional way to get the response value.
+        // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()) {
             System.out.println("Your name: " + result.get());
         }
 
-// The Java 8 way to get the response value (with lambda expression).
+        // The Java 8 way to get the response value (with lambda expression).
         result.ifPresent(name -> System.out.println("Your name: " + name));
 
     }
 
+    //an alert to show exceptions
     public void showAlert(Exception ex) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Error Dialog");
         alert.setHeaderText("An error has been occurred.");
         alert.setContentText(ex.getMessage());
 
-// Create expandable Exception.
+        // Create expandable Exception.
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         ex.printStackTrace(pw);
@@ -216,14 +218,16 @@ public class AppLayoutController implements Initializable {
         expContent.add(label, 0, 0);
         expContent.add(textArea, 0, 1);
 
-// Set expandable Exception into the dialog pane.
+        // Set expandable Exception into the dialog pane.
         alert.getDialogPane().setExpandableContent(expContent);
 
         alert.showAndWait();
     }
 
+    //processes file when buttons is clicked
     @FXML
-    public void btnProcessClicked() {
+    public void btnProcessClicked(    
+) {
         if (fileInUse != null) {
 
             try {
@@ -236,7 +240,7 @@ public class AppLayoutController implements Initializable {
                 this.spinGoToLine.setEditable(true);
                 this.spinGoToLine = new Spinner(0, fileLinesTable.getItems().size(), 0);
 
-                //busca o índice selecionado do combobox
+                //searchs for selected index by the combobox
                 selectedDDLIndex = this.ddlLayoutSelect.getSelectionModel().getSelectedIndex();
             } catch (FileNotFoundException ex) {
                 showAlert(ex);
@@ -249,20 +253,20 @@ public class AppLayoutController implements Initializable {
         btnProcess.disableProperty().set(b);
     }
 
-    //popula o combobox com os valores do arquivo de configuração
+    //fills combobox with values from settetings gile
     private void fillComboBox() {
 
-        //recebe o retorno dos valores do arquivo de configuração
+        //receives values from settings file
         List<String[]> setOfValues = settingsReader.readSettings();
 
         ObservableList<String> options = FXCollections.observableArrayList();
 
-        //itera sobre os valores de configuração adicionando a chave de cada
+        //iterates over settings and puts each key in combobox list
         setOfValues.stream().forEach((s) -> {
             options.add(s[0]);
         });
 
-        //popula o combobox
+        //fills combobox with values
         ddlLayoutSelect.setItems(options);
     }
 }

@@ -38,12 +38,10 @@ public class LineParser {
 
         ObservableList<DataBean> values = FXCollections.observableArrayList();
 
-        //busca o nome do módulo pela posição
-        //String moduleName = lineValue.getLineValue().getValue().substring(beginModName, endModName);
-        //busca o layout pelo nome do módulo
+        //search for layout by its name
         LayoutBean foundLayout = READER.findLayout(layoutName, registerType, segmentType);
 
-        //verifica se o layout carregou
+        //check if layouts has been loaded
         if (foundLayout != null) {
             for (AttributeBean a : foundLayout.getAttributes()) {
 
@@ -71,10 +69,10 @@ public class LineParser {
         }
     }
 
-    //formata o valor a ser exibido conforme a descrição
+    //format value to show based on its description
     private static String formatValue(String descrString, String valueString) throws ParseException {
 
-        //formata data
+        //format date
         if (descrString.contains("Data")) {
             SimpleDateFormat dateForm = new SimpleDateFormat("ddMMyy");
             Date date = dateForm.parse(valueString);
@@ -83,7 +81,7 @@ public class LineParser {
             return valueString;
         }
 
-        //formata valor
+        //format value
         for (String s : VALUESTOFORMAT) {
             if (descrString.contains(s)) {
                 DecimalFormat df = new DecimalFormat("#0.00");
@@ -92,7 +90,6 @@ public class LineParser {
                 return valueString;
             }
         }
-
         return valueString;
     }
 }

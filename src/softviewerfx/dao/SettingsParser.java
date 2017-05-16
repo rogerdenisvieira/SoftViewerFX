@@ -32,13 +32,13 @@ public class SettingsParser {
 
     public List<String[]> readSettings() {
         try {
-            //lê o arquivo de configuração
+            //read settings file
             prop.load(input);
 
-            //armazena o conjunto chave-valor
+            //store set of key-values
             Enumeration<?> e = prop.propertyNames();
 
-            //itera sobre cada chave-valor
+            //iterate over each key-value
             while (e.hasMoreElements()) {
                 String key = (String) e.nextElement();
                 String value = prop.getProperty(key);               
